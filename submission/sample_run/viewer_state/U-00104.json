@@ -1,0 +1,93 @@
+{
+ "viewer_id": "U-00104",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01106",
+  "decision_id": "D-02138",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01106",
+    "action_id": "A-01141"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02138",
+  "D-02932"
+ ],
+ "action_ids": [
+  "A-00834",
+  "A-01141"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01141",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01106",
+   "goal_id": "G12",
+   "status": "inconclusive"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01106",
+   "goal_id": "G12",
+   "verdict": "inconclusive",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 inconclusive (no_prior_exposure)"
+  }
+ ],
+ "sessions_acted": {
+  "1282c4e9-439d-4999-b9b2-4ef0daaf0d46": "D-02138"
+ },
+ "last_decision": {
+  "decision_id": "D-02932",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01106",
+   "user_id": "U-00104",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "inconclusive",
+   "started_at": "2026-10-01T15:00:16.899Z",
+   "deadline": "2026-10-08T15:00:16.899Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-02138",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility",
+    "event:9d7ec815-f080-4586-9cc8-042b7fc9ed65"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "inconclusive",
+    "attribution": "no_prior_exposure",
+    "reason": "signal happened, but the viewer had not seen any agent page or message before it",
+    "success_event": "event:oua-000688",
+    "rule_met": true
+   }
+  }
+ ]
+}

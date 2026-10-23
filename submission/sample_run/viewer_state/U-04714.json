@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-04714",
+ "active_goal": {
+  "goal_instance_id": "G-00184",
+  "user_id": "U-04714",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T03:24:37.415Z",
+  "deadline": "2026-10-04T03:24:37.415Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00229",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:56a12ac1-d33b-4a85-aeb6-cdb322a769dd",
+   "catalogue:T0908"
+  ],
+  "assumptions": [],
+  "target_slug": "lomobha-moni-d3",
+  "target_title_id": "T0908"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T03:24:37.415Z",
+ "decision_ids": [
+  "D-00229"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00229",
+  "at": "2026-10-01T03:24:37.415Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00184",
+   "user_id": "U-04714",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T03:24:37.415Z",
+   "deadline": "2026-10-04T03:24:37.415Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00229",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:56a12ac1-d33b-4a85-aeb6-cdb322a769dd",
+    "catalogue:T0908"
+   ],
+   "assumptions": [],
+   "target_slug": "lomobha-moni-d3",
+   "target_title_id": "T0908",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-029745",
+    "rule_met": true
+   }
+  }
+ ]
+}

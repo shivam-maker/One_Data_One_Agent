@@ -1,0 +1,105 @@
+{
+ "viewer_id": "U-04737",
+ "active_goal": {
+  "goal_instance_id": "G-00097",
+  "user_id": "U-04737",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T01:37:41.575Z",
+  "deadline": "2026-10-04T01:37:41.575Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00113",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:98087c5a-cac7-4d48-8ebf-6ab00e924f33",
+   "catalogue:T0521"
+  ],
+  "assumptions": [],
+  "target_slug": "molo-d2",
+  "target_title_id": "T0521"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T01:37:41.575Z",
+ "decision_ids": [
+  "D-00113"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "0b4378d2-4470-4877-89f8-11f8c8b63483",
+   "event": "login_success",
+   "received_at": "2026-10-01T15:51:02.696Z",
+   "late_s": 271045
+  },
+  {
+   "event_id": "94921eb5-e991-4e38-9ffe-ac1b6cf814d2",
+   "event": "app_open",
+   "received_at": "2026-10-01T15:51:06.738Z",
+   "late_s": 271045
+  },
+  {
+   "event_id": "3adfd560-6624-4ff9-a609-53689cb41ce5",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T15:51:26.025Z",
+   "late_s": 271045
+  },
+  {
+   "event_id": "520fca0b-1d32-4312-8c5d-9fa02fe77bb2",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T15:52:12.978Z",
+   "late_s": 271045
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00113",
+  "at": "2026-10-01T01:37:41.575Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 5,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00097",
+   "user_id": "U-04737",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T01:37:41.575Z",
+   "deadline": "2026-10-04T01:37:41.575Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00113",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:98087c5a-cac7-4d48-8ebf-6ab00e924f33",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

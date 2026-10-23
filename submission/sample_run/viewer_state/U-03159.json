@@ -1,0 +1,72 @@
+{
+ "viewer_id": "U-03159",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T01:45:24.744Z",
+ "decision_ids": [
+  "D-00125",
+  "D-00126"
+ ],
+ "action_ids": [
+  "A-00049"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00106",
+   "goal_id": "G01",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00106",
+   "goal_id": "G01",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G01 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "36948cf3-15af-487f-9a0b-5ed33f0147d4": "D-00125"
+ },
+ "last_decision": {
+  "decision_id": "D-00126",
+  "at": "2026-10-01T01:45:24.744Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00106",
+   "user_id": "U-03159",
+   "goal_id": "G01",
+   "name": "first_play_24h",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T01:45:21.960Z",
+   "deadline": "2026-10-02T01:45:21.960Z",
+   "rule_version": "G01-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 24
+   },
+   "decision_id": "D-00125",
+   "eligibility_evidence": [
+    "goal_rule:G01:eligibility",
+    "event:8ecf966e-91c8-48d1-8474-c0f6e1c3a561"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G01-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

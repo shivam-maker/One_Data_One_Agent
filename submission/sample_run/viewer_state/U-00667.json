@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-00667",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:40:08.670Z",
+ "decision_ids": [
+  "D-00091",
+  "D-01359",
+  "D-02071"
+ ],
+ "action_ids": [
+  "A-00036",
+  "A-00441",
+  "A-00803"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00081",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00081",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "6a0fa1da-5834-44f5-a3aa-d30b65dd6a0f": "D-00091",
+  "3e456856-e401-43a7-8579-ba070685b6c4": "D-01359",
+  "e8893b1a-dddd-48d7-937a-516e71bd93cb": "D-02071"
+ },
+ "last_decision": {
+  "decision_id": "D-02071",
+  "at": "2026-10-01T14:40:08.670Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00081",
+   "user_id": "U-00667",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T00:51:39.136Z",
+   "deadline": "2026-10-04T00:51:39.136Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00091",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:02cc9e41-367c-4842-89c4-155bb97b605b",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

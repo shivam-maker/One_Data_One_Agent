@@ -1,0 +1,36 @@
+{
+ "viewer_id": "U-03134",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:46:11.212Z",
+ "decision_ids": [
+  "D-00448"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "c0dd33cd-452b-4efc-ad19-8d47c61a25f0",
+   "event": "app_open",
+   "received_at": "2026-10-01T11:19:06.171Z",
+   "late_s": 773625
+  },
+  {
+   "event_id": "be03a9d7-ee52-44bf-88ef-90adfd525017",
+   "event": "search",
+   "received_at": "2026-10-01T11:19:43.710Z",
+   "late_s": 773625
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00448",
+  "at": "2026-10-01T04:46:11.212Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": []
+}

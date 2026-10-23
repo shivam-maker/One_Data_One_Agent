@@ -1,0 +1,36 @@
+{
+ "viewer_id": "U-02091",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:45:31.995Z",
+ "decision_ids": [
+  "D-00397"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "a02f1889-16b5-4410-a17e-a36dd3dc60ef",
+   "event": "app_open",
+   "received_at": "2026-10-01T16:30:03.030Z",
+   "late_s": 773695
+  },
+  {
+   "event_id": "80c22fae-5313-4498-a0c2-13f85d3907b6",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T16:30:18.308Z",
+   "late_s": 773695
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00397",
+  "at": "2026-10-01T04:45:31.995Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "holdout",
+ "goals": []
+}

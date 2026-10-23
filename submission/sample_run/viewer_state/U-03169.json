@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-03169",
+ "active_goal": {
+  "goal_instance_id": "G-00719",
+  "user_id": "U-03169",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T10:25:25.048Z",
+  "deadline": "2026-10-04T10:25:25.048Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01273",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:8d3d58fe-7d39-4016-bac0-7bc0bc3a1f75",
+   "catalogue:T1976"
+  ],
+  "assumptions": [],
+  "target_slug": "rasuya-moni-d6",
+  "target_title_id": "T1976"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T10:25:25.048Z",
+ "decision_ids": [
+  "D-01273"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01273",
+  "at": "2026-10-01T10:25:25.048Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00719",
+   "user_id": "U-03169",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T10:25:25.048Z",
+   "deadline": "2026-10-04T10:25:25.048Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01273",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:8d3d58fe-7d39-4016-bac0-7bc0bc3a1f75",
+    "catalogue:T1976"
+   ],
+   "assumptions": [],
+   "target_slug": "rasuya-moni-d6",
+   "target_title_id": "T1976",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-019991",
+    "rule_met": true
+   }
+  }
+ ]
+}

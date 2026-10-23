@@ -1,0 +1,97 @@
+{
+ "viewer_id": "U-00061",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01115",
+  "decision_id": "D-02150",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01115",
+    "action_id": "A-01142"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02150",
+  "D-02611",
+  "D-02933"
+ ],
+ "action_ids": [
+  "A-00840",
+  "A-01142"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01142",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01115",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01115",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "4adba374-f543-4036-993f-d2a07f34307d": "D-02150"
+ },
+ "last_decision": {
+  "decision_id": "D-02933",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01115",
+   "user_id": "U-00061",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T15:01:01.249Z",
+   "deadline": "2026-10-04T15:01:01.249Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02150",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:576138cf-c3ca-4bd4-a057-2ae74dedad79",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

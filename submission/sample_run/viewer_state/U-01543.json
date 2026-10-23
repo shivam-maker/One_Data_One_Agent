@@ -1,0 +1,75 @@
+{
+ "viewer_id": "U-01543",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:01:01.422Z",
+ "decision_ids": [
+  "D-02148",
+  "D-02151"
+ ],
+ "action_ids": [
+  "A-00841"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01114",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01114",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {
+  "cc1ad8e9-33c1-4ae3-8b95-0698590d59b9": "D-02151"
+ },
+ "last_decision": {
+  "decision_id": "D-02151",
+  "at": "2026-10-01T15:01:01.422Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01114",
+   "user_id": "U-01543",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T15:00:55.166Z",
+   "deadline": "2026-10-04T15:00:55.166Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02148",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:49989692-ab21-4557-a94e-873049f9f588",
+    "catalogue:T0916"
+   ],
+   "assumptions": [],
+   "target_slug": "bagi-baya-d4",
+   "target_title_id": "T0916",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "viewer_id": "U-04720",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00015",
+  "decision_id": "D-00015",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00015",
+    "action_id": "A-00557"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T15:33:07.494Z",
+ "decision_ids": [
+  "D-00015",
+  "D-01665",
+  "D-02391"
+ ],
+ "action_ids": [
+  "A-00008",
+  "A-00557",
+  "A-00928"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00557",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00015",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00015",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "3067ee9d-c454-4149-983d-78578c0c83ef": "D-00015",
+  "6afc8769-5229-47ab-8386-94657740f8b6": "D-02391"
+ },
+ "last_decision": {
+  "decision_id": "D-02391",
+  "at": "2026-10-01T15:33:07.494Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00015",
+   "user_id": "U-04720",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-09-30T19:03:24.232Z",
+   "deadline": "2026-10-03T19:03:24.232Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00015",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:2c34ffc9-5fef-48dd-958f-becd9359a6f4",
+    "catalogue:T0005"
+   ],
+   "assumptions": [],
+   "target_slug": "tidha-dakachu-d1",
+   "target_title_id": "T0005",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

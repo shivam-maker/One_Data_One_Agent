@@ -1,0 +1,99 @@
+{
+ "viewer_id": "U-03921",
+ "active_goal": {
+  "goal_instance_id": "G-00147",
+  "user_id": "U-03921",
+  "goal_id": "G08",
+  "name": "try_new_release_7d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T02:43:06.554Z",
+  "deadline": "2026-10-08T02:43:06.554Z",
+  "rule_version": "G08-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "a title released in the 30 days before the goal start",
+   "window_hours": 168
+  },
+  "decision_id": "D-00179",
+  "eligibility_evidence": [
+   "goal_rule:G08:eligibility",
+   "profile:U-03921"
+  ],
+  "assumptions": []
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T02:43:06.554Z",
+ "decision_ids": [
+  "D-00179"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "a7fa8ecd-55b0-49c5-9078-cd1e33cdc417",
+   "event": "app_open",
+   "received_at": "2026-10-01T11:40:38.862Z",
+   "late_s": 161514
+  },
+  {
+   "event_id": "f5c99a44-5594-474a-b7ff-d413afa703ed",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T11:40:55.963Z",
+   "late_s": 161514
+  },
+  {
+   "event_id": "e2d9bb15-9e24-4cf8-ab08-5c2654561a2a",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T11:41:26.738Z",
+   "late_s": 161514
+  },
+  {
+   "event_id": "4ddaea55-f7fc-4d75-98c1-2e70e793b1d3",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T11:42:01.824Z",
+   "late_s": 161514
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00179",
+  "at": "2026-10-01T02:43:06.554Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 5,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00147",
+   "user_id": "U-03921",
+   "goal_id": "G08",
+   "name": "try_new_release_7d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T02:43:06.554Z",
+   "deadline": "2026-10-08T02:43:06.554Z",
+   "rule_version": "G08-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "a title released in the 30 days before the goal start",
+    "window_hours": 168
+   },
+   "decision_id": "D-00179",
+   "eligibility_evidence": [
+    "goal_rule:G08:eligibility",
+    "profile:U-03921"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G08-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

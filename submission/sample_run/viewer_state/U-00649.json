@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-00649",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T07:35:14.802Z",
+ "decision_ids": [
+  "D-00921"
+ ],
+ "action_ids": [
+  "A-00275"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "9b6c3196-4d3b-45cf-8378-78dd0899a0f1",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T07:37:32.152Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00508",
+   "goal_id": "G05",
+   "status": "inconclusive"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00508",
+   "goal_id": "G05",
+   "verdict": "inconclusive",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G05 inconclusive (in_flight)"
+  }
+ ],
+ "sessions_acted": {
+  "229ef93e-3003-451b-af3f-85d2f807883f": "D-00921"
+ },
+ "last_decision": {
+  "decision_id": "D-00921",
+  "at": "2026-10-01T07:35:14.802Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00508",
+   "user_id": "U-00649",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "agent",
+   "status": "inconclusive",
+   "started_at": "2026-10-01T07:35:14.802Z",
+   "deadline": "2026-10-08T07:35:14.802Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-00921",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-00649"
+   ],
+   "assumptions": [],
+   "provisional_event": "9b6c3196-4d3b-45cf-8378-78dd0899a0f1",
+   "provisional_rule_version": "G05-r1",
+   "verdict": {
+    "verdict": "inconclusive",
+    "attribution": "in_flight",
+    "reason": "purchase 137s after the decision: the purchase flow was already under way, so it cannot be credited to the agent",
+    "success_event": "event:9b6c3196-4d3b-45cf-8378-78dd0899a0f1",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "viewer_id": "U-01087",
+ "active_goal": {
+  "goal_instance_id": "G-00700",
+  "user_id": "U-01087",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "achieved_provisional",
+  "started_at": "2026-10-01T10:09:22.970Z",
+  "deadline": "2026-10-04T10:09:22.970Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01246",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:6e0d0343-5e07-475f-86d3-0de8b46f6588",
+   "catalogue:T1678"
+  ],
+  "assumptions": [],
+  "target_slug": "bhaja-moguba-d2",
+  "target_title_id": "T1678",
+  "provisional_event": "b962c9a8-eca0-4c70-b8b8-e93f10cc3bb3",
+  "provisional_rule_version": "G07-r1"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T10:09:22.970Z",
+ "decision_ids": [
+  "D-01246"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "b5e12976-6bc9-418b-b5ca-7a535fd047fe",
+   "event": "app_open",
+   "received_at": "2026-10-01T10:56:12.504Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "6b531bb8-19d5-4d4f-86f1-8e28ef0ac8c8",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T10:56:47.336Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "2da95a11-a60e-4d7f-8f2d-39e2c3055742",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T10:57:00.150Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "b962c9a8-eca0-4c70-b8b8-e93f10cc3bb3",
+   "event": "play_started",
+   "received_at": "2026-10-01T10:58:31.763Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "8daceed7-8138-4308-b918-f3f7c3f6b302",
+   "event": "play_progress",
+   "received_at": "2026-10-01T10:59:29.719Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "02291094-a18f-46c4-b450-7f9e59cc06f6",
+   "event": "play_progress",
+   "received_at": "2026-10-01T11:00:30.197Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "f676ab8a-3e68-43c4-a714-61d27bd3c553",
+   "event": "play_progress",
+   "received_at": "2026-10-01T11:01:32.037Z",
+   "late_s": 670383
+  },
+  {
+   "event_id": "e531b325-2390-4cda-ab94-5629f393dca0",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T11:02:11.629Z",
+   "late_s": 670383
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01246",
+  "at": "2026-10-01T10:09:22.970Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 9,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00700",
+   "user_id": "U-01087",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T10:09:22.970Z",
+   "deadline": "2026-10-04T10:09:22.970Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01246",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:6e0d0343-5e07-475f-86d3-0de8b46f6588",
+    "catalogue:T1678"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T1678",
+   "provisional_event": "b962c9a8-eca0-4c70-b8b8-e93f10cc3bb3",
+   "provisional_rule_version": "G07-r1",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:b962c9a8-eca0-4c70-b8b8-e93f10cc3bb3",
+    "rule_met": true
+   }
+  }
+ ]
+}

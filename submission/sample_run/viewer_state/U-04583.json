@@ -1,0 +1,88 @@
+{
+ "viewer_id": "U-04583",
+ "active_goal": {
+  "goal_instance_id": "G-01269",
+  "user_id": "U-04583",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T15:37:55.556Z",
+  "deadline": "2026-10-04T15:37:55.556Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02405",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:619ae88e-8c96-413b-a9ba-91b1187fe556",
+   "catalogue:T1393"
+  ],
+  "assumptions": [],
+  "target_slug": "bhari-vagi-d6",
+  "target_title_id": "T1393"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:52:23.247Z",
+ "decision_ids": [
+  "D-02405",
+  "D-02449"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "86d4bf9c-196b-46e9-9344-6ad49b22d42c",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T15:39:47.083Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02449",
+  "at": "2026-10-01T15:52:23.247Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01269",
+   "user_id": "U-04583",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T15:37:55.556Z",
+   "deadline": "2026-10-04T15:37:55.556Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02405",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:619ae88e-8c96-413b-a9ba-91b1187fe556",
+    "catalogue:T1393"
+   ],
+   "assumptions": [],
+   "target_slug": "bhari-vagi-d6",
+   "target_title_id": "T1393",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

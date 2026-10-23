@@ -1,0 +1,297 @@
+{
+  "population": {
+    "agent": 863,
+    "holdout": 883
+  },
+  "goal_assignment_rate": {
+    "agent": 0.8644,
+    "holdout": 0.8301
+  },
+  "stale_only_viewers": {
+    "agent": 105,
+    "holdout": 137
+  },
+  "primary_goal_success_itt": {
+    "a": "107/746",
+    "b": "97/733",
+    "rate_a": 0.1434,
+    "rate_b": 0.1323,
+    "diff_pp": 1.11,
+    "ci95_pp": [
+      -2.4,
+      4.62
+    ],
+    "p_value": 0.536
+  },
+  "per_goal": {
+    "G01": {
+      "a": "19/58",
+      "b": "14/50",
+      "rate_a": 0.3276,
+      "rate_b": 0.28,
+      "diff_pp": 4.76,
+      "ci95_pp": [
+        -12.58,
+        22.1
+      ],
+      "p_value": 0.5924
+    },
+    "G02": {
+      "a": "16/100",
+      "b": "11/101",
+      "rate_a": 0.16,
+      "rate_b": 0.1089,
+      "diff_pp": 5.11,
+      "ci95_pp": [
+        -4.3,
+        14.52
+      ],
+      "p_value": 0.2882
+    },
+    "G03": {
+      "a": "0/1",
+      "b": "0/0",
+      "rate_a": 0.0,
+      "rate_b": 0.0,
+      "diff_pp": 0.0,
+      "ci95_pp": [
+        NaN,
+        NaN
+      ],
+      "p_value": null
+    },
+    "G04": {
+      "a": "0/1",
+      "b": "0/1",
+      "rate_a": 0.0,
+      "rate_b": 0.0,
+      "diff_pp": 0.0,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "p_value": null
+    },
+    "G05": {
+      "a": "6/122",
+      "b": "4/101",
+      "rate_a": 0.0492,
+      "rate_b": 0.0396,
+      "diff_pp": 0.96,
+      "ci95_pp": [
+        -4.45,
+        6.36
+      ],
+      "p_value": 0.7309
+    },
+    "G06": {
+      "a": "1/16",
+      "b": "1/14",
+      "rate_a": 0.0625,
+      "rate_b": 0.0714,
+      "diff_pp": -0.89,
+      "ci95_pp": [
+        -18.86,
+        17.07
+      ],
+      "p_value": 0.9221
+    },
+    "G07": {
+      "a": "9/313",
+      "b": "12/319",
+      "rate_a": 0.0288,
+      "rate_b": 0.0376,
+      "diff_pp": -0.89,
+      "ci95_pp": [
+        -3.68,
+        1.9
+      ],
+      "p_value": 0.5342
+    },
+    "G08": {
+      "a": "24/71",
+      "b": "22/77",
+      "rate_a": 0.338,
+      "rate_b": 0.2857,
+      "diff_pp": 5.23,
+      "ci95_pp": [
+        -9.7,
+        20.16
+      ],
+      "p_value": 0.4921
+    },
+    "G09": {
+      "a": "7/18",
+      "b": "4/11",
+      "rate_a": 0.3889,
+      "rate_b": 0.3636,
+      "diff_pp": 2.53,
+      "ci95_pp": [
+        -33.74,
+        38.79
+      ],
+      "p_value": 0.8918
+    },
+    "G12": {
+      "a": "25/46",
+      "b": "29/59",
+      "rate_a": 0.5435,
+      "rate_b": 0.4915,
+      "diff_pp": 5.2,
+      "ci95_pp": [
+        -14.04,
+        24.43
+      ],
+      "p_value": 0.5972
+    }
+  },
+  "secondary_itt": {
+    "play_3d": {
+      "a": "493/863",
+      "b": "457/883",
+      "rate_a": 0.5713,
+      "rate_b": 0.5176,
+      "diff_pp": 5.37,
+      "ci95_pp": [
+        0.71,
+        10.04
+      ],
+      "p_value": 0.0243
+    },
+    "complete_3d": {
+      "a": "297/863",
+      "b": "259/883",
+      "rate_a": 0.3441,
+      "rate_b": 0.2933,
+      "diff_pp": 5.08,
+      "ci95_pp": [
+        0.72,
+        9.45
+      ],
+      "p_value": 0.0226
+    },
+    "return_day2_7": {
+      "a": "690/863",
+      "b": "696/883",
+      "rate_a": 0.7995,
+      "rate_b": 0.7882,
+      "diff_pp": 1.13,
+      "ci95_pp": [
+        -2.66,
+        4.93
+      ],
+      "p_value": 0.559
+    },
+    "purchase_7d": {
+      "a": "24/863",
+      "b": "32/883",
+      "rate_a": 0.0278,
+      "rate_b": 0.0362,
+      "diff_pp": -0.84,
+      "ci95_pp": [
+        -2.49,
+        0.81
+      ],
+      "p_value": 0.3175
+    }
+  },
+  "naive_served_vs_everyone_else_play3d": {
+    "a": "421/624",
+    "b": "529/1122",
+    "rate_a": 0.6747,
+    "rate_b": 0.4715,
+    "diff_pp": 20.32,
+    "ci95_pp": [
+      15.62,
+      25.02
+    ],
+    "p_value": 0.0
+  },
+  "naive_served_vs_unserved_in_agent_arm_play3d": {
+    "a": "421/624",
+    "b": "72/239",
+    "rate_a": 0.6747,
+    "rate_b": 0.3013,
+    "diff_pp": 37.34,
+    "ci95_pp": [
+      30.46,
+      44.22
+    ],
+    "p_value": 0.0
+  },
+  "served_viewers": 624,
+  "balance": {
+    "agent": {
+      "viewers": 863,
+      "pre_period_plays_per_viewer": 4.53,
+      "status_mix": {
+        "never": 383,
+        "active": 323,
+        "lapsed": 102,
+        "no_profile": 54,
+        "trial_active": 1
+      }
+    },
+    "holdout": {
+      "viewers": 883,
+      "pre_period_plays_per_viewer": 4.65,
+      "status_mix": {
+        "never": 380,
+        "lapsed": 113,
+        "active": 340,
+        "no_profile": 49,
+        "trial_active": 1
+      }
+    }
+  },
+  "pilot": {
+    "report_claim_served_vs_others": {
+      "a": "87/217",
+      "b": "649/3674",
+      "rate_a": 0.4009,
+      "rate_b": 0.1766,
+      "diff_pp": 22.43,
+      "ci95_pp": [
+        15.79,
+        29.06
+      ],
+      "p_value": 0.0
+    },
+    "itt_treatment_vs_holdout": {
+      "a": "349/1912",
+      "b": "387/1979",
+      "rate_a": 0.1825,
+      "rate_b": 0.1956,
+      "diff_pp": -1.3,
+      "ci95_pp": [
+        -3.76,
+        1.16
+      ],
+      "p_value": 0.2998
+    },
+    "treatment_unserved_vs_holdout": {
+      "a": "262/1695",
+      "b": "387/1979",
+      "rate_a": 0.1546,
+      "rate_b": 0.1956,
+      "diff_pp": -4.1,
+      "ci95_pp": [
+        -6.55,
+        -1.65
+      ],
+      "p_value": 0.0012
+    }
+  },
+  "verdicts_agent_arm": {
+    "failed": 640,
+    "succeeded": 94,
+    "inconclusive": 13
+  },
+  "attribution_agent_arm": {
+    "exposed_before_signal:home_page_shown": 89,
+    "exposed_before_signal:message_clicked": 1,
+    "in_flight": 5,
+    "no_prior_exposure": 8,
+    "exposed_before_signal:message_delivered": 4
+  }
+}

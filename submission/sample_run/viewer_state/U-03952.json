@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-03952",
+ "active_goal": {
+  "goal_instance_id": "G-01371",
+  "user_id": "U-03952",
+  "goal_id": "G09",
+  "name": "weekly_habit_14d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T16:41:32.868Z",
+  "deadline": "2026-10-15T16:41:32.868Z",
+  "rule_version": "G09-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "on 3 distinct IST days",
+   "window_hours": 336
+  },
+  "decision_id": "D-02613",
+  "eligibility_evidence": [
+   "goal_rule:G09:eligibility",
+   "event:9eee0101-1690-44a2-a45a-22a13eafc58b"
+  ],
+  "assumptions": []
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:41:32.868Z",
+ "decision_ids": [
+  "D-02613"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02613",
+  "at": "2026-10-01T16:41:32.868Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01371",
+   "user_id": "U-03952",
+   "goal_id": "G09",
+   "name": "weekly_habit_14d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T16:41:32.868Z",
+   "deadline": "2026-10-15T16:41:32.868Z",
+   "rule_version": "G09-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "on 3 distinct IST days",
+    "window_hours": 336
+   },
+   "decision_id": "D-02613",
+   "eligibility_evidence": [
+    "goal_rule:G09:eligibility",
+    "event:9eee0101-1690-44a2-a45a-22a13eafc58b"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-025401",
+    "rule_met": true
+   }
+  }
+ ]
+}

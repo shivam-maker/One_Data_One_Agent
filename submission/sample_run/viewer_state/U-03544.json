@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-03544",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T09:06:14.523Z",
+ "decision_ids": [
+  "D-01121"
+ ],
+ "action_ids": [
+  "A-00351"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00629",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00629",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "a7eb1d46-2425-4710-ae59-74458a501b6a": "D-01121"
+ },
+ "last_decision": {
+  "decision_id": "D-01121",
+  "at": "2026-10-01T09:06:14.523Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00629",
+   "user_id": "U-03544",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T09:06:14.523Z",
+   "deadline": "2026-10-04T09:06:14.523Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01121",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:fbed98ae-a027-43d6-ae6e-4a5605856df7",
+    "catalogue:T0524"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T0524",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

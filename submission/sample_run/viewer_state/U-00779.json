@@ -1,0 +1,70 @@
+{
+ "viewer_id": "U-00779",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:13:09.202Z",
+ "decision_ids": [
+  "D-02513"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01327",
+   "goal_id": "G06",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01327",
+   "goal_id": "G06",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G06 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02513",
+  "at": "2026-10-01T16:13:09.202Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01327",
+   "user_id": "U-00779",
+   "goal_id": "G06",
+   "name": "reactivate_lapsed_14d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T16:13:09.202Z",
+   "deadline": "2026-10-15T16:13:09.202Z",
+   "rule_version": "G06-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "any paid plan",
+    "window_hours": 336
+   },
+   "decision_id": "D-02513",
+   "eligibility_evidence": [
+    "goal_rule:G06:eligibility",
+    "profile:U-00779",
+    "event:cedc0be6-5f04-4b50-adb9-62e93c545fe7"
+   ],
+   "assumptions": [
+    "'recently' defined as within 30 days (goal rule is underspecified)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G06-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

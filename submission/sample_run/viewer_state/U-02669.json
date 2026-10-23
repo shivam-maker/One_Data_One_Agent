@@ -1,0 +1,102 @@
+{
+ "viewer_id": "U-02669",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00064",
+  "decision_id": "D-00070",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00064",
+    "action_id": "A-00566"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T17:31:20.537Z",
+ "decision_ids": [
+  "D-00070",
+  "D-01272",
+  "D-01674",
+  "D-02764"
+ ],
+ "action_ids": [
+  "A-00028",
+  "A-00401",
+  "A-00566",
+  "A-01048"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00566",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00064",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00064",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 4 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "63fefeba-091c-435d-abcd-fd9ad7c4e810": "D-00070",
+  "239f83fa-77a6-4a32-8e09-e8032711fad9": "D-01272",
+  "586c7f0b-cc00-4af8-aab8-4bbcbf5735eb": "D-02764"
+ },
+ "last_decision": {
+  "decision_id": "D-02764",
+  "at": "2026-10-01T17:31:20.537Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 5,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00064",
+   "user_id": "U-02669",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-09-30T23:55:50.384Z",
+   "deadline": "2026-10-03T23:55:50.384Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00070",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:6c1be537-49d7-4026-8c35-b14197803b9a",
+    "catalogue:T0004"
+   ],
+   "assumptions": [],
+   "target_slug": "hapibha-d1",
+   "target_title_id": "T0004",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

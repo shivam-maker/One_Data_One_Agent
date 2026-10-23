@@ -1,0 +1,78 @@
+{
+ "viewer_id": "U-03982",
+ "active_goal": {
+  "goal_instance_id": "G-00043",
+  "user_id": "U-03982",
+  "goal_id": "G05",
+  "name": "first_paid_7d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-09-30T21:14:45.224Z",
+  "deadline": "2026-10-07T21:14:45.224Z",
+  "rule_version": "G05-r1",
+  "success_signal": {
+   "event": "purchase_completed",
+   "condition": "is_trial = false",
+   "window_hours": 168
+  },
+  "decision_id": "D-00045",
+  "eligibility_evidence": [
+   "goal_rule:G05:eligibility",
+   "profile:U-03982"
+  ],
+  "assumptions": []
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:40:57.068Z",
+ "decision_ids": [
+  "D-00045",
+  "D-00765",
+  "D-02526",
+  "D-02578",
+  "D-02783"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02783",
+  "at": "2026-10-01T17:40:57.068Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 5,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00043",
+   "user_id": "U-03982",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-09-30T21:14:45.224Z",
+   "deadline": "2026-10-07T21:14:45.224Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-00045",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-03982"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G05-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "viewer_id": "U-02814",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:01:39.833Z",
+ "decision_ids": [
+  "D-02680",
+  "D-02682"
+ ],
+ "action_ids": [
+  "A-01023"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01400",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01400",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {
+  "379a3bc7-62e2-446f-a467-a31b4cd01b64": "D-02682"
+ },
+ "last_decision": {
+  "decision_id": "D-02682",
+  "at": "2026-10-01T17:01:39.833Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01400",
+   "user_id": "U-02814",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T17:01:37.155Z",
+   "deadline": "2026-10-04T17:01:37.155Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02680",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:f0f95c21-723d-4f38-8067-9cd0c8bd9774",
+    "catalogue:T1512"
+   ],
+   "assumptions": [],
+   "target_slug": "patena-d1",
+   "target_title_id": "T1512",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

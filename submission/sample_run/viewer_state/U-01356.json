@@ -1,0 +1,102 @@
+{
+ "viewer_id": "U-01356",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00241",
+  "decision_id": "D-00307",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00241",
+    "action_id": "A-00599"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:59:14.604Z",
+ "decision_ids": [
+  "D-00307",
+  "D-00856",
+  "D-01008",
+  "D-01712",
+  "D-01926",
+  "D-01927"
+ ],
+ "action_ids": [
+  "A-00117",
+  "A-00244",
+  "A-00599"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00599",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00241",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00241",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "818497c0-4d01-4fa8-bdf3-ef2eff4f3389": "D-00307",
+  "7306059f-1a5d-44fc-869c-940b9bfbdedb": "D-00856"
+ },
+ "last_decision": {
+  "decision_id": "D-01927",
+  "at": "2026-10-01T13:59:14.604Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 7,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00241",
+   "user_id": "U-01356",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T04:20:57.158Z",
+   "deadline": "2026-10-04T04:20:57.158Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00307",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:3055ed26-c62e-4c6e-82c9-04572392d647",
+    "catalogue:T0901"
+   ],
+   "assumptions": [],
+   "target_slug": "yatite-roloda-d3",
+   "target_title_id": "T0901",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

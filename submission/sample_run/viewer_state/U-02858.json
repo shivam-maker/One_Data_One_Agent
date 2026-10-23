@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-02858",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00450",
+  "decision_id": "D-00833",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00450",
+    "action_id": "A-00646"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T17:55:15.912Z",
+ "decision_ids": [
+  "D-00833",
+  "D-01763",
+  "D-02814"
+ ],
+ "action_ids": [
+  "A-00232",
+  "A-00646",
+  "A-01064"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00646",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00450",
+   "goal_id": "G01",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00450",
+   "goal_id": "G01",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G01 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "da41cf97-f971-4cf6-b61e-3c7024239d77": "D-00833",
+  "d58af826-f457-449f-b88c-87b80b433fcf": "D-02814"
+ },
+ "last_decision": {
+  "decision_id": "D-02814",
+  "at": "2026-10-01T17:55:15.912Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00450",
+   "user_id": "U-02858",
+   "goal_id": "G01",
+   "name": "first_play_24h",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T06:58:59.096Z",
+   "deadline": "2026-10-02T06:58:59.096Z",
+   "rule_version": "G01-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 24
+   },
+   "decision_id": "D-00833",
+   "eligibility_evidence": [
+    "goal_rule:G01:eligibility",
+    "profile:U-02858"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G01-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

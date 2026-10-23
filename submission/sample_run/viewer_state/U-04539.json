@@ -1,0 +1,48 @@
+{
+ "viewer_id": "U-04539",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:47:24.005Z",
+ "decision_ids": [
+  "D-00525"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "55ab1577-4bec-4526-8cba-14412946d83b",
+   "event": "app_open",
+   "received_at": "2026-10-01T12:29:47.376Z",
+   "late_s": 767387
+  },
+  {
+   "event_id": "5039fb24-6a56-4de8-bf69-53d54be75577",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T12:29:54.022Z",
+   "late_s": 767387
+  },
+  {
+   "event_id": "fe6ad3b2-4df7-4081-b3e3-b4d6940463b1",
+   "event": "play_started",
+   "received_at": "2026-10-01T12:31:48.197Z",
+   "late_s": 767387
+  },
+  {
+   "event_id": "79a0146f-0c53-431c-851a-d0a0f53f8a58",
+   "event": "play_progress",
+   "received_at": "2026-10-01T12:42:48.301Z",
+   "late_s": 767387
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00525",
+  "at": "2026-10-01T04:47:24.005Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 5,
+ "arm": "holdout",
+ "goals": []
+}

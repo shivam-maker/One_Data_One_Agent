@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-04098",
+ "active_goal": {
+  "goal_instance_id": "G-00947",
+  "user_id": "U-04098",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T13:31:08.330Z",
+  "deadline": "2026-10-04T13:31:08.330Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01840",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:ebc7f533-12c7-4798-bd12-df90e93ef4e2",
+   "catalogue:T0522"
+  ],
+  "assumptions": [],
+  "target_slug": "guka-kosusa-d2",
+  "target_title_id": "T0522"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T13:31:08.330Z",
+ "decision_ids": [
+  "D-01840"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01840",
+  "at": "2026-10-01T13:31:08.330Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00947",
+   "user_id": "U-04098",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T13:31:08.330Z",
+   "deadline": "2026-10-04T13:31:08.330Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01840",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:ebc7f533-12c7-4798-bd12-df90e93ef4e2",
+    "catalogue:T0522"
+   ],
+   "assumptions": [],
+   "target_slug": "guka-kosusa-d2",
+   "target_title_id": "T0522",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

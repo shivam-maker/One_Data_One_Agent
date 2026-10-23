@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-00528",
+ "active_goal": {
+  "goal_instance_id": "G-01439",
+  "user_id": "U-00528",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T17:34:17.133Z",
+  "deadline": "2026-10-04T17:34:17.133Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02770",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:2cbcfaeb-7a83-4b54-aff2-08f435b3d8f3",
+   "catalogue:T1678"
+  ],
+  "assumptions": [],
+  "target_slug": "bhaja-moguba-d2",
+  "target_title_id": "T1678"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:34:17.133Z",
+ "decision_ids": [
+  "D-02770"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02770",
+  "at": "2026-10-01T17:34:17.133Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01439",
+   "user_id": "U-00528",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T17:34:17.133Z",
+   "deadline": "2026-10-04T17:34:17.133Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02770",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:2cbcfaeb-7a83-4b54-aff2-08f435b3d8f3",
+    "catalogue:T1678"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T1678",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

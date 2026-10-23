@@ -1,0 +1,167 @@
+{
+ "viewer_id": "U-03954",
+ "active_goal": {
+  "goal_instance_id": "G-00807",
+  "user_id": "U-03954",
+  "goal_id": "G08",
+  "name": "try_new_release_7d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T11:38:38.885Z",
+  "deadline": "2026-10-08T11:38:38.885Z",
+  "rule_version": "G08-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "a title released in the 30 days before the goal start",
+   "window_hours": 168
+  },
+  "decision_id": "D-01412",
+  "eligibility_evidence": [
+   "goal_rule:G08:eligibility",
+   "profile:U-03954"
+  ],
+  "assumptions": []
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T11:38:38.885Z",
+ "decision_ids": [
+  "D-00063",
+  "D-01412"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "e63f92a5-91d5-4ef0-9066-efafa0158231",
+   "event": "app_open",
+   "received_at": "2026-10-01T04:28:01.465Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "3d6c2268-7c60-4c31-9c3e-f0361c39674a",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T04:28:31.724Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "9aee2472-ef0c-4deb-b9e2-9492bf7c26fb",
+   "event": "play_started",
+   "received_at": "2026-10-01T04:29:46.080Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "1a60ca48-7cd4-4876-a0bb-b69f78b68ded",
+   "event": "play_progress",
+   "received_at": "2026-10-01T04:30:15.883Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "e0083beb-0423-457d-8bee-b0116a65e58d",
+   "event": "play_progress",
+   "received_at": "2026-10-01T04:30:44.769Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "5ef224f1-fe4f-4d1a-be95-1ea9aec84b7b",
+   "event": "play_progress",
+   "received_at": "2026-10-01T04:31:14.278Z",
+   "late_s": 72648
+  },
+  {
+   "event_id": "59bed767-f8d5-40d0-a9cc-2594223223ca",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T04:31:34.115Z",
+   "late_s": 72648
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00058",
+   "goal_id": "G07",
+   "closed_at": "2026-10-01T11:38:38.885Z",
+   "status": "achieved_provisional",
+   "note": "success signal observed; awaiting final judgment"
+  }
+ ],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01412",
+  "at": "2026-10-01T11:38:38.885Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 9,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00058",
+   "user_id": "U-03954",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-09-30T23:31:46.382Z",
+   "deadline": "2026-10-03T23:31:46.382Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00063",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:083bcf98-83ec-4c89-8e47-1192d97c9647",
+    "catalogue:T1902"
+   ],
+   "assumptions": [],
+   "target_slug": "kova-sako-d5",
+   "target_title_id": "T1902",
+   "provisional_event": "9aee2472-ef0c-4deb-b9e2-9492bf7c26fb",
+   "provisional_rule_version": "G07-r1",
+   "history": [
+    {
+     "at": "2026-10-01T11:38:38.885Z",
+     "event": "achieved_provisional",
+     "note": "success signal observed; awaiting final judgment"
+    }
+   ],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:9aee2472-ef0c-4deb-b9e2-9492bf7c26fb",
+    "rule_met": true
+   }
+  },
+  {
+   "goal_instance_id": "G-00807",
+   "user_id": "U-03954",
+   "goal_id": "G08",
+   "name": "try_new_release_7d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T11:38:38.885Z",
+   "deadline": "2026-10-08T11:38:38.885Z",
+   "rule_version": "G08-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "a title released in the 30 days before the goal start",
+    "window_hours": 168
+   },
+   "decision_id": "D-01412",
+   "eligibility_evidence": [
+    "goal_rule:G08:eligibility",
+    "profile:U-03954"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G08-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "viewer_id": "U-04114",
+ "active_goal": {
+  "goal_instance_id": "G-00052",
+  "user_id": "U-04114",
+  "goal_id": "G06",
+  "name": "reactivate_lapsed_14d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-09-30T22:28:21.502Z",
+  "deadline": "2026-10-14T22:28:21.502Z",
+  "rule_version": "G06-r1",
+  "success_signal": {
+   "event": "purchase_completed",
+   "condition": "any paid plan",
+   "window_hours": 336
+  },
+  "decision_id": "D-00056",
+  "eligibility_evidence": [
+   "goal_rule:G06:eligibility",
+   "profile:U-04114",
+   "event:65ee871a-0799-4cbd-baa5-678e7b42b28d"
+  ],
+  "assumptions": [
+   "'recently' defined as within 30 days (goal rule is underspecified)"
+  ]
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T10:02:03.714Z",
+ "decision_ids": [
+  "D-00056",
+  "D-01232",
+  "D-01233"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "f6681217-a3a9-4b41-a911-60830922fc83",
+   "event": "app_open",
+   "received_at": "2026-10-01T08:40:13.583Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "51280aec-7fac-442c-99f9-6898f07a6e09",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T08:40:29.778Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "c7d9a4ef-103b-4c76-bc73-75419f59ed73",
+   "event": "play_started",
+   "received_at": "2026-10-01T08:41:32.739Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "1d285885-f677-4d61-9ccb-8c72aa5f4b71",
+   "event": "play_progress",
+   "received_at": "2026-10-01T09:09:16.548Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "31ae9f1d-1d6a-4fa9-9627-f32b7b79931d",
+   "event": "play_progress",
+   "received_at": "2026-10-01T09:37:01.316Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "4843ec88-6ada-439b-9799-56a6237bbdb3",
+   "event": "play_progress",
+   "received_at": "2026-10-01T10:04:45.079Z",
+   "late_s": 413127
+  },
+  {
+   "event_id": "a67c19d3-0f70-4727-92e6-fcaddd67bae4",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T10:23:39.631Z",
+   "late_s": 413127
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01233",
+  "at": "2026-10-01T10:02:03.714Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 10,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00052",
+   "user_id": "U-04114",
+   "goal_id": "G06",
+   "name": "reactivate_lapsed_14d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-09-30T22:28:21.502Z",
+   "deadline": "2026-10-14T22:28:21.502Z",
+   "rule_version": "G06-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "any paid plan",
+    "window_hours": 336
+   },
+   "decision_id": "D-00056",
+   "eligibility_evidence": [
+    "goal_rule:G06:eligibility",
+    "profile:U-04114",
+    "event:65ee871a-0799-4cbd-baa5-678e7b42b28d"
+   ],
+   "assumptions": [
+    "'recently' defined as within 30 days (goal rule is underspecified)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G06-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

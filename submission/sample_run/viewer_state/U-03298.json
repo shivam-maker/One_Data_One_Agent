@@ -1,0 +1,109 @@
+{
+ "viewer_id": "U-03298",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00059",
+  "decision_id": "D-00064",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00059",
+    "action_id": "A-00565"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:30:00.000Z",
+ "decision_ids": [
+  "D-00064",
+  "D-00065",
+  "D-00897",
+  "D-00898",
+  "D-01673"
+ ],
+ "action_ids": [
+  "A-00025",
+  "A-00261",
+  "A-00565"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00565",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00059",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00059",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-021021"
+  }
+ ],
+ "sessions_acted": {
+  "8fbeb3cd-a4a5-4cbc-b9f0-b4fc7b8b423c": "D-00064",
+  "8cba5154-1ad6-46af-87a5-3a3ed456e8fb": "D-00897"
+ },
+ "last_decision": {
+  "decision_id": "D-01673",
+  "at": "2026-10-01T13:30:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 6,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00059",
+   "user_id": "U-03298",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-09-30T23:38:20.154Z",
+   "deadline": "2026-10-03T23:38:20.154Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00064",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:9f4252b7-d742-458c-9204-08b4c48f1aec",
+    "catalogue:T0581"
+   ],
+   "assumptions": [],
+   "target_slug": "bala-naja-d2",
+   "target_title_id": "T0581",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

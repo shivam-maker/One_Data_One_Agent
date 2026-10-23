@@ -1,0 +1,85 @@
+{
+ "viewer_id": "U-04744",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:32:38.164Z",
+ "decision_ids": [
+  "D-00249",
+  "D-00321",
+  "D-02557",
+  "D-02585"
+ ],
+ "action_ids": [
+  "A-00094",
+  "A-00986"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "21a3f103-af54-4e56-b5c3-13c0ade51fc4",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T03:36:18.443Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00196",
+   "goal_id": "G02",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00196",
+   "goal_id": "G02",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G02 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "5952feaa-4b0c-4142-b3b1-856fcde9d914": "D-00249",
+  "8ed201bd-8fcf-42bc-a890-33db86adef67": "D-02557"
+ },
+ "last_decision": {
+  "decision_id": "D-02585",
+  "at": "2026-10-01T16:32:38.164Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 6,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00196",
+   "user_id": "U-04744",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T03:34:19.887Z",
+   "deadline": "2026-10-04T03:34:19.887Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-00249",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "event:38e34f56-e5fa-412d-8bb1-72bfb9a340e9"
+   ],
+   "assumptions": [
+    "no episode was completed before the history window (2026-09-01)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

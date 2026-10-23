@@ -1,0 +1,93 @@
+{
+ "viewer_id": "U-00164",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00566",
+  "decision_id": "D-01025",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00566",
+    "action_id": "A-00671"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:30:00.000Z",
+ "decision_ids": [
+  "D-01025",
+  "D-01788"
+ ],
+ "action_ids": [
+  "A-00309",
+  "A-00671"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00671",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00566",
+   "goal_id": "G01",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00566",
+   "goal_id": "G01",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G01 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "27474c29-d5d9-41ae-ac6e-22af6518ca96": "D-01025"
+ },
+ "last_decision": {
+  "decision_id": "D-01788",
+  "at": "2026-10-01T13:30:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00566",
+   "user_id": "U-00164",
+   "goal_id": "G01",
+   "name": "first_play_24h",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T08:20:40.092Z",
+   "deadline": "2026-10-02T08:20:40.092Z",
+   "rule_version": "G01-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 24
+   },
+   "decision_id": "D-01025",
+   "eligibility_evidence": [
+    "goal_rule:G01:eligibility",
+    "profile:U-00164"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G01-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

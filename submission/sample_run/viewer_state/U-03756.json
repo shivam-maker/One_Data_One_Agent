@@ -1,0 +1,81 @@
+{
+ "viewer_id": "U-03756",
+ "active_goal": {
+  "goal_instance_id": "G-00803",
+  "user_id": "U-03756",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T11:37:24.944Z",
+  "deadline": "2026-10-04T11:37:24.944Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01405",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:f76c7aca-88e0-41a3-90a6-37dcfb3e4d1a",
+   "catalogue:T0901"
+  ],
+  "assumptions": [],
+  "target_slug": "yatite-roloda-d3",
+  "target_title_id": "T0901"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T11:37:24.944Z",
+ "decision_ids": [
+  "D-00351",
+  "D-01405"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01405",
+  "at": "2026-10-01T11:37:24.944Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00803",
+   "user_id": "U-03756",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T11:37:24.944Z",
+   "deadline": "2026-10-04T11:37:24.944Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01405",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:f76c7aca-88e0-41a3-90a6-37dcfb3e4d1a",
+    "catalogue:T0901"
+   ],
+   "assumptions": [],
+   "target_slug": "yatite-roloda-d3",
+   "target_title_id": "T0901",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

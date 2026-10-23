@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-02346",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01280",
+  "decision_id": "D-02427",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01280",
+    "action_id": "A-01166"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02427",
+  "D-02961"
+ ],
+ "action_ids": [
+  "A-00944",
+  "A-01166"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01166",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01280",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01280",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "8beee5cc-f879-4104-9d06-ec14d90db6d7": "D-02427"
+ },
+ "last_decision": {
+  "decision_id": "D-02961",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01280",
+   "user_id": "U-02346",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T15:46:19.397Z",
+   "deadline": "2026-10-04T15:46:19.397Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02427",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:ad7f7c76-8bcd-44fa-9866-a8f9ec2f4550",
+    "catalogue:T0002"
+   ],
+   "assumptions": [],
+   "target_slug": "hama-chudibha-d1",
+   "target_title_id": "T0002",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

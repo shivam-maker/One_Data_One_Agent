@@ -1,0 +1,102 @@
+{
+ "viewer_id": "U-03024",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00276",
+  "decision_id": "D-00580",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00276",
+    "action_id": "A-00609"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T16:16:24.932Z",
+ "decision_ids": [
+  "D-00580",
+  "D-01722",
+  "D-01981",
+  "D-02297",
+  "D-02353",
+  "D-02528"
+ ],
+ "action_ids": [
+  "A-00137",
+  "A-00609",
+  "A-00766"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00609",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00276",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00276",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 6 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "3c5b9e87-3e62-4ee1-93e7-4690cad80444": "D-00580",
+  "2df6a139-ff5e-44c8-995a-17dea9f18d44": "D-01981"
+ },
+ "last_decision": {
+  "decision_id": "D-02528",
+  "at": "2026-10-01T16:16:24.932Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 7,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00276",
+   "user_id": "U-03024",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T04:55:07.876Z",
+   "deadline": "2026-10-04T04:55:07.876Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00580",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:ef5c612d-00e6-4bc2-8a0e-334a54626f08",
+    "catalogue:T1814"
+   ],
+   "assumptions": [],
+   "target_slug": "baguti-gida-d4",
+   "target_title_id": "T1814",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "viewer_id": "U-01415",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00429",
+  "decision_id": "D-00803",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00429",
+    "action_id": "A-00643"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T15:37:52.063Z",
+ "decision_ids": [
+  "D-00803",
+  "D-01760",
+  "D-02404"
+ ],
+ "action_ids": [
+  "A-00223",
+  "A-00643",
+  "A-00935"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00643",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00429",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00429",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-009652"
+  }
+ ],
+ "sessions_acted": {
+  "4d8a4aad-73ed-4bda-baaf-97ae430fcb95": "D-00803",
+  "de926916-cacc-41b0-9d53-c2a33429ca03": "D-02404"
+ },
+ "last_decision": {
+  "decision_id": "D-02404",
+  "at": "2026-10-01T15:37:52.063Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00429",
+   "user_id": "U-01415",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T06:39:52.232Z",
+   "deadline": "2026-10-04T06:39:52.232Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00803",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:2cd051a7-67ca-4f49-9860-345db79324a6",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

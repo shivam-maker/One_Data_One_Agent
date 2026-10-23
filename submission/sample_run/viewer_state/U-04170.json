@@ -1,0 +1,71 @@
+{
+ "viewer_id": "U-04170",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T08:57:18.842Z",
+ "decision_ids": [
+  "D-01094"
+ ],
+ "action_ids": [
+  "A-00339"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00611",
+   "goal_id": "G09",
+   "status": "inconclusive"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00611",
+   "goal_id": "G09",
+   "verdict": "inconclusive",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G09 inconclusive (no_prior_exposure)"
+  }
+ ],
+ "sessions_acted": {
+  "d8bbb5f7-e5cc-44e7-9253-a76a7cb88e0a": "D-01094"
+ },
+ "last_decision": {
+  "decision_id": "D-01094",
+  "at": "2026-10-01T08:57:18.842Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00611",
+   "user_id": "U-04170",
+   "goal_id": "G09",
+   "name": "weekly_habit_14d",
+   "arm": "agent",
+   "status": "inconclusive",
+   "started_at": "2026-10-01T08:57:18.842Z",
+   "deadline": "2026-10-15T08:57:18.842Z",
+   "rule_version": "G09-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "on 3 distinct IST days",
+    "window_hours": 336
+   },
+   "decision_id": "D-01094",
+   "eligibility_evidence": [
+    "goal_rule:G09:eligibility",
+    "profile:U-04170"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "inconclusive",
+    "attribution": "no_prior_exposure",
+    "reason": "signal happened, but the viewer had not seen any agent page or message before it",
+    "success_event": "event:oua-026585",
+    "rule_met": true
+   }
+  }
+ ]
+}

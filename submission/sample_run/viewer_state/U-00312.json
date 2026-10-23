@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-00312",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01042",
+  "decision_id": "D-02013",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01042",
+    "action_id": "A-01129"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02013",
+  "D-02917"
+ ],
+ "action_ids": [
+  "A-00778",
+  "A-01129"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01129",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01042",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01042",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "6f573a77-e0f7-43ea-aed8-5af23ba48f20": "D-02013"
+ },
+ "last_decision": {
+  "decision_id": "D-02917",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01042",
+   "user_id": "U-00312",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T14:24:23.834Z",
+   "deadline": "2026-10-04T14:24:23.834Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02013",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:02fd9078-c142-4f25-88a3-caa6e6f2202f",
+    "catalogue:T0916"
+   ],
+   "assumptions": [],
+   "target_slug": "bagi-baya-d4",
+   "target_title_id": "T0916",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

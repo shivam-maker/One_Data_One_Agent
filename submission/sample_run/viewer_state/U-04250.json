@@ -1,0 +1,104 @@
+{
+ "viewer_id": "U-04250",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01367",
+  "decision_id": "D-02602",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01367",
+    "action_id": "A-01184"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02602",
+  "D-02980"
+ ],
+ "action_ids": [
+  "A-00995",
+  "A-01184"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01184",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01367",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01367",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-027056"
+  }
+ ],
+ "sessions_acted": {
+  "9b155b7d-7009-4ee2-8ea0-5a1819162652": "D-02602"
+ },
+ "last_decision": {
+  "decision_id": "D-02980",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01367",
+   "user_id": "U-04250",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T16:39:44.549Z",
+   "deadline": "2026-10-04T16:39:44.549Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02602",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:b59a84f1-67dd-4efe-a8c5-20d3e746406d",
+    "catalogue:T0006"
+   ],
+   "assumptions": [],
+   "target_slug": "gima-bhadaba-d1",
+   "target_title_id": "T0006",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

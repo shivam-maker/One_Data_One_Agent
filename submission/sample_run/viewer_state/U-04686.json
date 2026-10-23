@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-04686",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:44:01.075Z",
+ "decision_ids": [
+  "D-02705",
+  "D-02790"
+ ],
+ "action_ids": [
+  "A-01054"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01449",
+   "goal_id": "G02",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01449",
+   "goal_id": "G02",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G02 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "23035c07-e383-4051-83dd-3ccbf282eed7": "D-02790"
+ },
+ "last_decision": {
+  "decision_id": "D-02790",
+  "at": "2026-10-01T17:44:01.075Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01449",
+   "user_id": "U-04686",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T17:44:01.075Z",
+   "deadline": "2026-10-04T17:44:01.075Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-02790",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "event:4666fef2-ef6d-4c2b-86be-f219ad893505"
+   ],
+   "assumptions": [
+    "no episode was completed before the history window (2026-09-01)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

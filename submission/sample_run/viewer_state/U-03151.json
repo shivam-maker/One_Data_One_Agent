@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-03151",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T12:06:19.086Z",
+ "decision_ids": [
+  "D-01489"
+ ],
+ "action_ids": [
+  "A-00486"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00853",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00853",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {
+  "97d31370-dbf9-4a80-90fb-f776442bd27d": "D-01489"
+ },
+ "last_decision": {
+  "decision_id": "D-01489",
+  "at": "2026-10-01T12:06:19.086Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00853",
+   "user_id": "U-03151",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T12:06:19.086Z",
+   "deadline": "2026-10-04T12:06:19.086Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01489",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:2ebed001-446f-4441-96b0-e991ee7853ab",
+    "catalogue:T0531"
+   ],
+   "assumptions": [],
+   "target_slug": "chugu-d2",
+   "target_title_id": "T0531",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

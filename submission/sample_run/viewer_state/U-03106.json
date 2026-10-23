@@ -1,0 +1,30 @@
+{
+ "viewer_id": "U-03106",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:08:13.301Z",
+ "decision_ids": [
+  "D-02493"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "c12c7afc-627b-41d6-8c92-3a694a6d9598",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T16:10:21.466Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02493",
+  "at": "2026-10-01T16:08:13.301Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": []
+}

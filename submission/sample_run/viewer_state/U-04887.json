@@ -1,0 +1,127 @@
+{
+ "viewer_id": "U-04887",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:01:44.395Z",
+ "decision_ids": [
+  "D-01137",
+  "D-02161"
+ ],
+ "action_ids": [
+  "A-00843"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "a122fafc-c044-49a4-9e97-c4d387d705a4",
+   "event": "login_success",
+   "received_at": "2026-10-01T10:56:23.667Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "a633ecf8-15be-4118-95a6-fcfc5a7c124d",
+   "event": "app_open",
+   "received_at": "2026-10-01T10:56:29.599Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "e38fd8cc-6172-4e99-9637-b3159cf46a02",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T10:56:56.851Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "7d933e8d-17c6-4361-978c-28fc5c38763a",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T10:57:34.456Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "77768985-277c-4978-b863-349c73f636c2",
+   "event": "play_started",
+   "received_at": "2026-10-01T10:58:43.153Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "6a44353c-bf3d-48f7-93ab-36b2e5404b04",
+   "event": "play_progress",
+   "received_at": "2026-10-01T10:59:27.757Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "ff4b74f6-6aca-482e-9bf0-daeb3cd96eac",
+   "event": "play_progress",
+   "received_at": "2026-10-01T11:00:11.900Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "7e8ec0de-b8df-4026-9afc-1e12c4b0a34c",
+   "event": "play_progress",
+   "received_at": "2026-10-01T11:00:58.182Z",
+   "late_s": 766370
+  },
+  {
+   "event_id": "02227812-4361-4b06-8b5b-f81d810e14db",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T11:01:27.554Z",
+   "late_s": 766370
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01121",
+   "goal_id": "G08",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01121",
+   "goal_id": "G08",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G08 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "12270674-170b-4740-94a2-0c21a2422cfe": "D-02161"
+ },
+ "last_decision": {
+  "decision_id": "D-02161",
+  "at": "2026-10-01T15:01:44.395Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 12,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01121",
+   "user_id": "U-04887",
+   "goal_id": "G08",
+   "name": "try_new_release_7d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T15:01:44.395Z",
+   "deadline": "2026-10-08T15:01:44.395Z",
+   "rule_version": "G08-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "a title released in the 30 days before the goal start",
+    "window_hours": 168
+   },
+   "decision_id": "D-02161",
+   "eligibility_evidence": [
+    "goal_rule:G08:eligibility",
+    "profile:U-04887"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-030900",
+    "rule_met": true
+   }
+  }
+ ]
+}

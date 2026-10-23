@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-01884",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01438",
+  "decision_id": "D-02769",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01438",
+    "action_id": "A-01200"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02769",
+  "D-02997"
+ ],
+ "action_ids": [
+  "A-01051",
+  "A-01200"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01200",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01438",
+   "goal_id": "G07",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01438",
+   "goal_id": "G07",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "da6b437a-21bb-41c2-838b-059bc04b9a41": "D-02769"
+ },
+ "last_decision": {
+  "decision_id": "D-02997",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01438",
+   "user_id": "U-01884",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T17:33:58.997Z",
+   "deadline": "2026-10-04T17:33:58.997Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02769",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:b3efb15f-c371-4fa0-9fec-5dca3eb79ea7",
+    "catalogue:T1811"
+   ],
+   "assumptions": [],
+   "target_slug": "bagi-baya-d4",
+   "target_title_id": "T1811",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:message_delivered",
+    "reason": "signal play_started after exposure to agent action (message_delivered)",
+    "success_event": "event:oua-012730",
+    "rule_met": true
+   }
+  }
+ ]
+}

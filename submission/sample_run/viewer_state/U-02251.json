@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-02251",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:08:11.968Z",
+ "decision_ids": [
+  "D-00257",
+  "D-02269"
+ ],
+ "action_ids": [
+  "A-00099",
+  "A-00882"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00204",
+   "goal_id": "G05",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00204",
+   "goal_id": "G05",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G05 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "72ae1b29-a96c-477b-bfdf-ebef81599b98": "D-00257",
+  "e14dfa53-6a7b-4a76-88f1-f285607b0b10": "D-02269"
+ },
+ "last_decision": {
+  "decision_id": "D-02269",
+  "at": "2026-10-01T15:08:11.968Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00204",
+   "user_id": "U-02251",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T03:40:52.538Z",
+   "deadline": "2026-10-08T03:40:52.538Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-00257",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-02251"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal purchase_completed after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-014681",
+    "rule_met": true
+   }
+  }
+ ]
+}

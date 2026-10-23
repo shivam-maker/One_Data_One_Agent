@@ -1,0 +1,72 @@
+{
+ "viewer_id": "U-01766",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T02:58:02.619Z",
+ "decision_ids": [
+  "D-00196",
+  "D-00197"
+ ],
+ "action_ids": [
+  "A-00077"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00161",
+   "goal_id": "G01",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00161",
+   "goal_id": "G01",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G01 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {
+  "5e8cd953-56f1-49de-9097-c472e8eb1708": "D-00196"
+ },
+ "last_decision": {
+  "decision_id": "D-00197",
+  "at": "2026-10-01T02:58:02.619Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00161",
+   "user_id": "U-01766",
+   "goal_id": "G01",
+   "name": "first_play_24h",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T02:58:00.352Z",
+   "deadline": "2026-10-02T02:58:00.352Z",
+   "rule_version": "G01-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 24
+   },
+   "decision_id": "D-00196",
+   "eligibility_evidence": [
+    "goal_rule:G01:eligibility",
+    "event:620eee1f-3d83-41f4-b46c-a90a50016cec"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G01-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

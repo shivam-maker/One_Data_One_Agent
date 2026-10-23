@@ -1,0 +1,17 @@
+# Install into your virtual environment (from the submission/ folder):
+#     python -m pip install -r requirements.txt
+# Versions are the ones the project was tested with.
+
+# API
+fastapi==0.160.0
+uvicorn==0.54.0
+pydantic==2.14.1
+starlette==1.9.0
+anyio==4.15.1
+
+# Tests (pytest, and httpx for FastAPI's TestClient)
+pytest==9.1.1
+httpx==0.28.1
+
+# Optional: only needed for `--provider anthropic` (real model instead of the mock)
+# anthropic

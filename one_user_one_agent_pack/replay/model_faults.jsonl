@@ -1,0 +1,5 @@
+{"trigger_event_id":"202cccb8-8127-465f-b2d0-038cf533197e","user_id":"U-01991","fault":"unsupported_claim","model_output":{"goal_id":"G04","eligible":true,"confidence":0.97,"reason":"The user is on an active trial that ends tomorrow (confirmed in billing)."}}
+{"trigger_event_id":"a54e16b6-056d-4d0a-a35d-bd8257802c54","user_id":"U-02509","fault":"unsupported_claim","model_output":{"goal_id":"G04","eligible":true,"confidence":0.97,"reason":"The user is on an active trial that ends tomorrow (confirmed in billing)."}}
+{"trigger_event_id":"cd885956-0406-4b17-8e0b-3b97bbdd8a13","user_id":"U-04860","fault":"unsupported_claim","model_output":{"goal_id":"G04","eligible":true,"confidence":0.97,"reason":"The user is on an active trial that ends tomorrow (confirmed in billing)."}}
+{"trigger_event_id":"76b138f6-0952-456d-904a-bd0d04497cf7","user_id":"U-02563","fault":"malformed_output","model_output":"{\"goal_id\": \"G02\", \"eligible\": tr"}
+{"trigger_event_id":"5edb5b00-0773-4063-8da8-40929553233c","user_id":"U-01090","fault":"timeout","seconds":45}

@@ -1,0 +1,97 @@
+{
+ "viewer_id": "U-03595",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01388",
+  "decision_id": "D-02653",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01388",
+    "action_id": "A-01190"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02653",
+  "D-02838",
+  "D-02986"
+ ],
+ "action_ids": [
+  "A-01010",
+  "A-01190"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01190",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01388",
+   "goal_id": "G07",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01388",
+   "goal_id": "G07",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "d93c1474-5d39-4330-84d8-5a0221462b62": "D-02653"
+ },
+ "last_decision": {
+  "decision_id": "D-02986",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01388",
+   "user_id": "U-03595",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T16:52:49.863Z",
+   "deadline": "2026-10-04T16:52:49.863Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02653",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:60bc0f86-e0ad-4775-85bf-d0847cdda493",
+    "catalogue:T0909"
+   ],
+   "assumptions": [],
+   "target_slug": "pate-kari-d3",
+   "target_title_id": "T0909",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-022883",
+    "rule_met": true
+   }
+  }
+ ]
+}

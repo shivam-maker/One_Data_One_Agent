@@ -1,0 +1,104 @@
+{
+ "viewer_id": "U-01092",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:28:58.385Z",
+ "decision_ids": [
+  "D-00996",
+  "D-01134",
+  "D-01135",
+  "D-02033",
+  "D-02034"
+ ],
+ "action_ids": [
+  "A-00298",
+  "A-00788"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "2d25d885-9da9-4e81-8296-73ac17f8f85c",
+   "event": "app_open",
+   "received_at": "2026-10-01T13:19:37.004Z",
+   "late_s": 81965
+  },
+  {
+   "event_id": "5b1bb448-02d1-4d69-b9cd-22364b79652d",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T13:19:51.947Z",
+   "late_s": 81965
+  },
+  {
+   "event_id": "8b80488a-aa20-4643-a088-6625922c46a4",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T13:20:12.548Z",
+   "late_s": 81965
+  },
+  {
+   "event_id": "e76f2961-efcd-485b-acbf-5f51eef9af08",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T13:21:02.228Z",
+   "late_s": 81965
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00550",
+   "goal_id": "G02",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00550",
+   "goal_id": "G02",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G02 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "a94bfdb9-1f50-4bbf-917f-95cb526cd2c8": "D-00996",
+  "acb3229d-fe7e-41db-a90d-72f5acf3e16b": "D-02033"
+ },
+ "last_decision": {
+  "decision_id": "D-02034",
+  "at": "2026-10-01T14:28:58.385Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 10,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00550",
+   "user_id": "U-01092",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T08:08:30.201Z",
+   "deadline": "2026-10-04T08:08:30.201Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-00996",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "event:1d4f7a68-1d49-4b33-8b03-4603b1ccd7c1"
+   ],
+   "assumptions": [
+    "no episode was completed before the history window (2026-09-01)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

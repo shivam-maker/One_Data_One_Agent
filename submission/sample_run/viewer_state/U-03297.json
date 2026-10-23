@@ -1,0 +1,81 @@
+{
+ "viewer_id": "U-03297",
+ "active_goal": {
+  "goal_instance_id": "G-00279",
+  "user_id": "U-03297",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T04:58:18.690Z",
+  "deadline": "2026-10-04T04:58:18.690Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00586",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:05441d3b-d41f-477e-af01-20e52f6adcda",
+   "catalogue:T0901"
+  ],
+  "assumptions": [],
+  "target_slug": "yatite-roloda-d3",
+  "target_title_id": "T0901"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:58:18.690Z",
+ "decision_ids": [
+  "D-00544",
+  "D-00586"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00586",
+  "at": "2026-10-01T04:58:18.690Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00279",
+   "user_id": "U-03297",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T04:58:18.690Z",
+   "deadline": "2026-10-04T04:58:18.690Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00586",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:05441d3b-d41f-477e-af01-20e52f6adcda",
+    "catalogue:T0901"
+   ],
+   "assumptions": [],
+   "target_slug": "yatite-roloda-d3",
+   "target_title_id": "T0901",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-020988",
+    "rule_met": true
+   }
+  }
+ ]
+}

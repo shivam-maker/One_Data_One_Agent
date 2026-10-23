@@ -1,0 +1,72 @@
+{
+ "viewer_id": "U-00505",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T13:29:15.486Z",
+ "decision_ids": [
+  "D-00355",
+  "D-01656"
+ ],
+ "action_ids": [
+  "A-00551"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00940",
+   "goal_id": "G08",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00940",
+   "goal_id": "G08",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G08 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "910da329-884f-4e50-9e3d-f3550b8d5f13": "D-01656"
+ },
+ "last_decision": {
+  "decision_id": "D-01656",
+  "at": "2026-10-01T13:29:15.486Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00940",
+   "user_id": "U-00505",
+   "goal_id": "G08",
+   "name": "try_new_release_7d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T13:29:15.486Z",
+   "deadline": "2026-10-08T13:29:15.486Z",
+   "rule_version": "G08-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "a title released in the 30 days before the goal start",
+    "window_hours": 168
+   },
+   "decision_id": "D-01656",
+   "eligibility_evidence": [
+    "goal_rule:G08:eligibility",
+    "profile:U-00505"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-003515",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+# Usage (from the submission/ folder):
+#   docker compose up --build api            API on http://localhost:8000/docs
+#   docker compose run --rm replay           full replay -> simulate -> judge -> reports into ./sample_run
+#   docker compose run --rm tests            run the test suite
+# The data pack is mounted read-only from ../one_user_one_agent_pack (override with OUA_PACK_DIR).
+
+x-common: &common
+  build: .
+  image: oua-agent:latest
+  volumes:
+    - ${OUA_PACK_DIR:-../one_user_one_agent_pack}:/data/pack:ro
+
+services:
+  api:
+    <<: *common
+    command: ["serve", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${OUA_PACK_DIR:-../one_user_one_agent_pack}:/data/pack:ro
+      - api_state:/app/api_state
+
+  replay:
+    <<: *common
+    command: ["all", "--out", "/app/sample_run"]
+    volumes:
+      - ${OUA_PACK_DIR:-../one_user_one_agent_pack}:/data/pack:ro
+      - ./sample_run:/app/sample_run
+    profiles: ["jobs"]
+
+  tests:
+    <<: *common
+    entrypoint: ["python", "-m", "pytest", "-q", "-p", "no:cacheprovider"]
+    command: []
+    profiles: ["jobs"]
+
+volumes:
+  api_state:

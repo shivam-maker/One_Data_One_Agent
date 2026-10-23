@@ -1,0 +1,101 @@
+{
+ "viewer_id": "U-00483",
+ "active_goal": {
+  "goal_instance_id": "G-00373",
+  "user_id": "U-00483",
+  "goal_id": "G08",
+  "name": "try_new_release_7d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T06:00:22.174Z",
+  "deadline": "2026-10-08T06:00:22.174Z",
+  "rule_version": "G08-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "a title released in the 30 days before the goal start",
+   "window_hours": 168
+  },
+  "decision_id": "D-00729",
+  "eligibility_evidence": [
+   "goal_rule:G08:eligibility",
+   "profile:U-00483"
+  ],
+  "assumptions": []
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T11:43:41.591Z",
+ "decision_ids": [
+  "D-00729",
+  "D-00914",
+  "D-01419"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "1a7d22eb-1b65-438e-b358-1297335aaad7",
+   "event": "app_open",
+   "received_at": "2026-10-01T06:29:22.916Z",
+   "late_s": 145399
+  },
+  {
+   "event_id": "95edcd03-68a7-4c30-8ea8-9db78cd31658",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T06:29:51.844Z",
+   "late_s": 145399
+  },
+  {
+   "event_id": "886ac507-3a6f-47b4-b3b3-2b48de0020f3",
+   "event": "app_open",
+   "received_at": "2026-10-01T08:01:45.540Z",
+   "late_s": 140671
+  },
+  {
+   "event_id": "ad32d558-d98d-421c-b8fa-c51fac0e3891",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T08:02:04.171Z",
+   "late_s": 140671
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01419",
+  "at": "2026-10-01T11:43:41.591Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 7,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00373",
+   "user_id": "U-00483",
+   "goal_id": "G08",
+   "name": "try_new_release_7d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T06:00:22.174Z",
+   "deadline": "2026-10-08T06:00:22.174Z",
+   "rule_version": "G08-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "a title released in the 30 days before the goal start",
+    "window_hours": 168
+   },
+   "decision_id": "D-00729",
+   "eligibility_evidence": [
+    "goal_rule:G08:eligibility",
+    "profile:U-00483"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-003356",
+    "rule_met": true
+   }
+  }
+ ]
+}

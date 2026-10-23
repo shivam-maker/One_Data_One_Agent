@@ -1,0 +1,97 @@
+{
+ "viewer_id": "U-00624",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00536",
+  "decision_id": "D-00974",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00536",
+    "action_id": "A-00666"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:30:00.000Z",
+ "decision_ids": [
+  "D-00974",
+  "D-00975",
+  "D-01783"
+ ],
+ "action_ids": [
+  "A-00289",
+  "A-00666"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00666",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00536",
+   "goal_id": "G07",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00536",
+   "goal_id": "G07",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "61f4118c-e019-42cf-8759-fe7e6609c1c3": "D-00974"
+ },
+ "last_decision": {
+  "decision_id": "D-01783",
+  "at": "2026-10-01T13:30:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00536",
+   "user_id": "U-00624",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T07:57:33.829Z",
+   "deadline": "2026-10-04T07:57:33.829Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00974",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:92d3f3fa-3f5c-40c5-b139-7a404865961a",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:message_delivered",
+    "reason": "signal play_started after exposure to agent action (message_delivered)",
+    "success_event": "event:oua-004120",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "type": "title_withdrawn",
+    "at": "2026-10-01T07:00:00.000Z",
+    "affected_viewers": [
+      "U-00917",
+      "U-02044",
+      "U-03639",
+      "U-04907",
+      "U-03645",
+      "U-04814",
+      "U-04429"
+    ],
+    "affected_decisions": [
+      "D-00595",
+      "D-00677",
+      "D-00710",
+      "D-00716",
+      "D-00756",
+      "D-00761",
+      "D-00771"
+    ],
+    "republished": [
+      "D-00835",
+      "D-00836",
+      "D-00837",
+      "D-00838",
+      "D-00839",
+      "D-00840",
+      "D-00841"
+    ],
+    "note": "7 live page(s) contained T0001; each owning agent republished or withdrew its page. Pending nudges re-check availability when they run."
+  },
+  {
+    "type": "goal_rule_corrected",
+    "at": "2026-10-01T08:30:00.000Z",
+    "affected_viewers": [],
+    "affected_decisions": [],
+    "note": "G03 success rule -> G03-r2; re-pointed 0 open goal(s) only (out of 582 goal instances)",
+    "new_rule_version": "G03-r2"
+  },
+  {
+    "type": "dependency_unavailable",
+    "at": "2026-10-01T10:35:00.000Z",
+    "affected_viewers": [],
+    "affected_decisions": [],
+    "note": "model_provider unavailable until 2026-10-01T10:42:00.000Z; decisions in the window use fallbacks (see decisions with degraded=true)"
+  },
+  {
+    "type": "dependency_degraded",
+    "at": "2026-10-01T13:10:00.000Z",
+    "affected_viewers": [],
+    "affected_decisions": [],
+    "note": "user_data_store degraded until 2026-10-01T13:17:00.000Z; decisions in the window use fallbacks (see decisions with degraded=true)"
+  }
+]

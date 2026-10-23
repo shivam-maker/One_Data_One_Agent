@@ -1,0 +1,81 @@
+{
+ "viewer_id": "U-04190",
+ "active_goal": {
+  "goal_instance_id": "G-00573",
+  "user_id": "U-04190",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T08:24:40.124Z",
+  "deadline": "2026-10-04T08:24:40.124Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01035",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:f153bbbc-7db3-4e7b-9a30-1337dd7ae042",
+   "catalogue:T0523"
+  ],
+  "assumptions": [],
+  "target_slug": "dhapipa-gini-d2",
+  "target_title_id": "T0523"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:03:14.926Z",
+ "decision_ids": [
+  "D-01035",
+  "D-02686"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02686",
+  "at": "2026-10-01T17:03:14.926Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00573",
+   "user_id": "U-04190",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T08:24:40.124Z",
+   "deadline": "2026-10-04T08:24:40.124Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01035",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:f153bbbc-7db3-4e7b-9a30-1337dd7ae042",
+    "catalogue:T0523"
+   ],
+   "assumptions": [],
+   "target_slug": "dhapipa-gini-d2",
+   "target_title_id": "T0523",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

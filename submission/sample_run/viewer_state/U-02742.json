@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-02742",
+ "active_goal": {
+  "goal_instance_id": "G-00207",
+  "user_id": "U-02742",
+  "goal_id": "G06",
+  "name": "reactivate_lapsed_14d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T03:41:32.270Z",
+  "deadline": "2026-10-15T03:41:32.270Z",
+  "rule_version": "G06-r1",
+  "success_signal": {
+   "event": "purchase_completed",
+   "condition": "any paid plan",
+   "window_hours": 336
+  },
+  "decision_id": "D-00261",
+  "eligibility_evidence": [
+   "goal_rule:G06:eligibility",
+   "profile:U-02742",
+   "event:048545b6-358a-4ddb-943a-3bd310b81aee"
+  ],
+  "assumptions": [
+   "'recently' defined as within 30 days (goal rule is underspecified)"
+  ]
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T03:41:32.270Z",
+ "decision_ids": [
+  "D-00261"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00261",
+  "at": "2026-10-01T03:41:32.270Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00207",
+   "user_id": "U-02742",
+   "goal_id": "G06",
+   "name": "reactivate_lapsed_14d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T03:41:32.270Z",
+   "deadline": "2026-10-15T03:41:32.270Z",
+   "rule_version": "G06-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "any paid plan",
+    "window_hours": 336
+   },
+   "decision_id": "D-00261",
+   "eligibility_evidence": [
+    "goal_rule:G06:eligibility",
+    "profile:U-02742",
+    "event:048545b6-358a-4ddb-943a-3bd310b81aee"
+   ],
+   "assumptions": [
+    "'recently' defined as within 30 days (goal rule is underspecified)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G06-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

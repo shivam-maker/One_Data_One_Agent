@@ -1,0 +1,81 @@
+{
+ "viewer_id": "U-03562",
+ "active_goal": {
+  "goal_instance_id": "G-00930",
+  "user_id": "U-03562",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T13:23:48.715Z",
+  "deadline": "2026-10-04T13:23:48.715Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01643",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:8998f9b4-d497-4ea6-b866-31b83300dc95",
+   "catalogue:T1177"
+  ],
+  "assumptions": [],
+  "target_slug": "gubava-gihaya-d5",
+  "target_title_id": "T1177"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:42:02.234Z",
+ "decision_ids": [
+  "D-01643",
+  "D-02077"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02077",
+  "at": "2026-10-01T14:42:02.234Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00930",
+   "user_id": "U-03562",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T13:23:48.715Z",
+   "deadline": "2026-10-04T13:23:48.715Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01643",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:8998f9b4-d497-4ea6-b866-31b83300dc95",
+    "catalogue:T1177"
+   ],
+   "assumptions": [],
+   "target_slug": "gubava-gihaya-d5",
+   "target_title_id": "T1177",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "viewer_id": "U-03347",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01415",
+  "decision_id": "D-02712",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01415",
+    "action_id": "A-01197"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02712",
+  "D-02993"
+ ],
+ "action_ids": [
+  "A-01034",
+  "A-01197"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01197",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01415",
+   "goal_id": "G12",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01415",
+   "goal_id": "G12",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 reached after exposure; the same lever can be reused"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-021287"
+  }
+ ],
+ "sessions_acted": {
+  "f348966a-3be3-4c4e-a339-26e6938e85ed": "D-02712"
+ },
+ "last_decision": {
+  "decision_id": "D-02993",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01415",
+   "user_id": "U-03347",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T17:12:12.422Z",
+   "deadline": "2026-10-08T17:12:12.422Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-02712",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility",
+    "event:0de1ad85-bd83-4d4d-b4f8-3e16280655dc"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-021285",
+    "rule_met": true
+   }
+  }
+ ]
+}

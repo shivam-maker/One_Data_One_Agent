@@ -1,0 +1,27 @@
+{
+ "viewer_id": "U-03407",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T06:52:25.207Z",
+ "decision_ids": [
+  "D-00822"
+ ],
+ "action_ids": [
+  "A-00231"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {
+  "cbd0f3eb-e7d2-4b13-a76d-dd3d9568d531": "D-00822"
+ },
+ "last_decision": {
+  "decision_id": "D-00822",
+  "at": "2026-10-01T06:52:25.207Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 1,
+ "arm": "agent",
+ "goals": []
+}

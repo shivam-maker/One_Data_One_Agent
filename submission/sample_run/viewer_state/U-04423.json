@@ -1,0 +1,81 @@
+{
+ "viewer_id": "U-04423",
+ "active_goal": {
+  "goal_instance_id": "G-00275",
+  "user_id": "U-04423",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T04:51:49.374Z",
+  "deadline": "2026-10-04T04:51:49.374Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00579",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:3ddc6ccb-8717-42bd-9bc3-cbebf214e2f4",
+   "catalogue:T1678"
+  ],
+  "assumptions": [],
+  "target_slug": "bhaja-moguba-d2",
+  "target_title_id": "T1678"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T08:29:33.045Z",
+ "decision_ids": [
+  "D-00579",
+  "D-01047"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01047",
+  "at": "2026-10-01T08:29:33.045Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00275",
+   "user_id": "U-04423",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T04:51:49.374Z",
+   "deadline": "2026-10-04T04:51:49.374Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00579",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:3ddc6ccb-8717-42bd-9bc3-cbebf214e2f4",
+    "catalogue:T1678"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T1678",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-027993",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "viewer_id": "U-01264",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00829",
+  "decision_id": "D-01454",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00829",
+    "action_id": "A-01087"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01454",
+  "D-02656",
+  "D-02870"
+ ],
+ "action_ids": [
+  "A-00471",
+  "A-01012",
+  "A-01087"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01087",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00829",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00829",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "367a3e86-e52b-447f-ba90-9c224f3553ce": "D-01454",
+  "2ea45b3b-9554-4482-abfe-1e108b240b06": "D-02656"
+ },
+ "last_decision": {
+  "decision_id": "D-02870",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00829",
+   "user_id": "U-01264",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T11:53:04.893Z",
+   "deadline": "2026-10-04T11:53:04.893Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01454",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:26537837-78bc-4d79-9fa6-519c9de22529",
+    "catalogue:T0523"
+   ],
+   "assumptions": [],
+   "target_slug": "dhapipa-gini-d2",
+   "target_title_id": "T0523",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

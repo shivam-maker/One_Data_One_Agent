@@ -1,0 +1,98 @@
+{
+ "viewer_id": "U-00084",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01361",
+  "decision_id": "D-02577",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01361",
+    "action_id": "A-01182"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02577",
+  "D-02614",
+  "D-02732",
+  "D-02978"
+ ],
+ "action_ids": [
+  "A-00990",
+  "A-01182"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01182",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01361",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01361",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "ba3503e8-bfe8-438c-9819-032b4e9efd13": "D-02577"
+ },
+ "last_decision": {
+  "decision_id": "D-02978",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 5,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01361",
+   "user_id": "U-00084",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T16:30:54.764Z",
+   "deadline": "2026-10-04T16:30:54.764Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02577",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:8db2669f-4b7c-4a27-aeab-ab03182e0891",
+    "catalogue:T0912"
+   ],
+   "assumptions": [],
+   "target_slug": "gula-tete-d3",
+   "target_title_id": "T0912",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

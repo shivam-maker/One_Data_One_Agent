@@ -1,0 +1,95 @@
+{
+ "viewer_id": "U-02850",
+ "active_goal": {
+  "goal_instance_id": "G-00165",
+  "user_id": "U-02850",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T03:00:36.870Z",
+  "deadline": "2026-10-04T03:00:36.870Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00202",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:af162f52-3483-45ca-8d6b-6038612312d9",
+   "catalogue:T1678"
+  ],
+  "assumptions": [],
+  "target_slug": "bhaja-moguba-d2",
+  "target_title_id": "T1678"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:28:33.397Z",
+ "decision_ids": [
+  "D-00202",
+  "D-02354",
+  "D-02757"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "b967a21b-670d-419b-aec5-2d547d69227d",
+   "event": "app_open",
+   "received_at": "2026-10-01T13:09:30.485Z",
+   "late_s": 509136
+  },
+  {
+   "event_id": "e3b410d0-c142-4695-9424-ac93c164edd9",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T13:09:59.591Z",
+   "late_s": 509136
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02757",
+  "at": "2026-10-01T17:28:33.397Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 5,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00165",
+   "user_id": "U-02850",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T03:00:36.870Z",
+   "deadline": "2026-10-04T03:00:36.870Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00202",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:af162f52-3483-45ca-8d6b-6038612312d9",
+    "catalogue:T1678"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T1678",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "viewer_id": "U-04158",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00372",
+  "decision_id": "D-00728",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "whatsapp",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00372",
+    "action_id": "A-00632"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T17:47:32.676Z",
+ "decision_ids": [
+  "D-00728",
+  "D-01747",
+  "D-02797"
+ ],
+ "action_ids": [
+  "A-00188",
+  "A-00632",
+  "A-01056"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00632",
+   "ist_day": "2026-10-01",
+   "channel": "whatsapp"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00372",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00372",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "4300d7e9-c668-4b47-aa12-bcd47447285f": "D-00728",
+  "eeb60c3c-7b5b-4742-9812-f41812191125": "D-02797"
+ },
+ "last_decision": {
+  "decision_id": "D-02797",
+  "at": "2026-10-01T17:47:32.676Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00372",
+   "user_id": "U-04158",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T05:59:53.304Z",
+   "deadline": "2026-10-04T05:59:53.304Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00728",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:e7b8cb4e-2388-4f76-b129-e6da5e371280",
+    "catalogue:T1393"
+   ],
+   "assumptions": [],
+   "target_slug": "bhari-vagi-d6",
+   "target_title_id": "T1393",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

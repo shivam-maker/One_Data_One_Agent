@@ -1,0 +1,23 @@
+{
+ "viewer_id": "U-00062",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:45:27.091Z",
+ "decision_ids": [
+  "D-00390"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00390",
+  "at": "2026-10-01T04:45:27.091Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": []
+}

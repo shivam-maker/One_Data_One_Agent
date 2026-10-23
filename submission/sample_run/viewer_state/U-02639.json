@@ -1,0 +1,68 @@
+{
+ "viewer_id": "U-02639",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T12:18:55.464Z",
+ "decision_ids": [
+  "D-01378",
+  "D-01510"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00789",
+   "goal_id": "G12",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00789",
+   "goal_id": "G12",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01510",
+  "at": "2026-10-01T12:18:55.464Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00789",
+   "user_id": "U-02639",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T11:21:39.849Z",
+   "deadline": "2026-10-08T11:21:39.849Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-01378",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility",
+    "event:8e96f8f3-503b-47b1-b6f4-74f3b54444c1"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G12-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

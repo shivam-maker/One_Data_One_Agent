@@ -1,0 +1,71 @@
+{
+ "viewer_id": "U-03067",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T08:08:01.492Z",
+ "decision_ids": [
+  "D-00995"
+ ],
+ "action_ids": [
+  "A-00297"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00549",
+   "goal_id": "G05",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00549",
+   "goal_id": "G05",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G05 failed and the viewer never saw the intervention (delivery, not content, was the gap)"
+  }
+ ],
+ "sessions_acted": {
+  "b5d060f0-db1c-4ddf-a8b8-ec59da3a982b": "D-00995"
+ },
+ "last_decision": {
+  "decision_id": "D-00995",
+  "at": "2026-10-01T08:08:01.492Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00549",
+   "user_id": "U-03067",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T08:08:01.492Z",
+   "deadline": "2026-10-08T08:08:01.492Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-00995",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-03067"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G05-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

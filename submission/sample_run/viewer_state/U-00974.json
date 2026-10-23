@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-00974",
+ "active_goal": {
+  "goal_instance_id": "G-01213",
+  "user_id": "U-00974",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T15:09:36.260Z",
+  "deadline": "2026-10-04T15:09:36.260Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02290",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:e4320a3a-67c9-422d-bbba-86a8377622b2",
+   "catalogue:T0901"
+  ],
+  "assumptions": [],
+  "target_slug": "yatite-roloda-d3",
+  "target_title_id": "T0901"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:09:36.260Z",
+ "decision_ids": [
+  "D-02290"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02290",
+  "at": "2026-10-01T15:09:36.260Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01213",
+   "user_id": "U-00974",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T15:09:36.260Z",
+   "deadline": "2026-10-04T15:09:36.260Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02290",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:e4320a3a-67c9-422d-bbba-86a8377622b2",
+    "catalogue:T0901"
+   ],
+   "assumptions": [],
+   "target_slug": "yatite-roloda-d3",
+   "target_title_id": "T0901",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:oua-006555",
+    "rule_met": true
+   }
+  }
+ ]
+}

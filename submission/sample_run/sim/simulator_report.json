@@ -1,0 +1,20 @@
+{
+  "seed": "oua-practice",
+  "triggered_users": 1746,
+  "events_written": 31856,
+  "counts": {
+    "actions_total": 1202,
+    "home_page_accepted": 917,
+    "home_page_published_but_not_shown": 14,
+    "home_page_shown_personalised": 832,
+    "organic_purchases_scripted": 36,
+    "push_clicked": 5,
+    "push_delivered": 235,
+    "push_requested": 269,
+    "push_undeliverable_token": 34,
+    "whatsapp_delivered": 16,
+    "whatsapp_requested": 16
+  },
+  "policy_problems": [],
+  "policy_problem_count": 0
+}

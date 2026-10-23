@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-00089",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:48:42.233Z",
+ "decision_ids": [
+  "D-02640"
+ ],
+ "action_ids": [
+  "A-01009"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01383",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01383",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "8c8a0d8f-c8b3-409d-bb2a-f3bc7c5a3126": "D-02640"
+ },
+ "last_decision": {
+  "decision_id": "D-02640",
+  "at": "2026-10-01T16:48:42.233Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01383",
+   "user_id": "U-00089",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T16:48:42.233Z",
+   "deadline": "2026-10-04T16:48:42.233Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02640",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:90af9e3d-2fa0-4202-9c89-90a71b3bba45",
+    "catalogue:T0903"
+   ],
+   "assumptions": [],
+   "target_slug": "yane-tegi-d3",
+   "target_title_id": "T0903",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

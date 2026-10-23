@@ -1,0 +1,78 @@
+{
+ "viewer_id": "U-00330",
+ "active_goal": {
+  "goal_instance_id": "G-01182",
+  "user_id": "U-00330",
+  "goal_id": "G02",
+  "name": "first_full_episode_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T15:06:39.599Z",
+  "deadline": "2026-10-04T15:06:39.599Z",
+  "rule_version": "G02-r1",
+  "success_signal": {
+   "event": "episode_completed",
+   "condition": "any episode",
+   "window_hours": 72
+  },
+  "decision_id": "D-02245",
+  "eligibility_evidence": [
+   "goal_rule:G02:eligibility",
+   "event:752a95f0-313a-4cd3-ad8b-e0643d02dfc0"
+  ],
+  "assumptions": [
+   "no episode was completed before the history window (2026-09-01)"
+  ]
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:06:39.599Z",
+ "decision_ids": [
+  "D-02245"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02245",
+  "at": "2026-10-01T15:06:39.599Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01182",
+   "user_id": "U-00330",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T15:06:39.599Z",
+   "deadline": "2026-10-04T15:06:39.599Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-02245",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "event:752a95f0-313a-4cd3-ad8b-e0643d02dfc0"
+   ],
+   "assumptions": [
+    "no episode was completed before the history window (2026-09-01)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

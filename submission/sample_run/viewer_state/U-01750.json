@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-01750",
+ "active_goal": {
+  "goal_instance_id": "G-01422",
+  "user_id": "U-01750",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T17:17:46.950Z",
+  "deadline": "2026-10-04T17:17:46.950Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02728",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:a81f7cc7-8ae6-44c9-958e-ce0327cf91ba",
+   "catalogue:T0909"
+  ],
+  "assumptions": [],
+  "target_slug": "pate-kari-d3",
+  "target_title_id": "T0909"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T17:17:46.950Z",
+ "decision_ids": [
+  "D-02728"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02728",
+  "at": "2026-10-01T17:17:46.950Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01422",
+   "user_id": "U-01750",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T17:17:46.950Z",
+   "deadline": "2026-10-04T17:17:46.950Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02728",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:a81f7cc7-8ae6-44c9-958e-ce0327cf91ba",
+    "catalogue:T0909"
+   ],
+   "assumptions": [],
+   "target_slug": "pate-kari-d3",
+   "target_title_id": "T0909",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

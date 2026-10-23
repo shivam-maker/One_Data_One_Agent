@@ -1,0 +1,75 @@
+{
+ "viewer_id": "U-01876",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T13:41:42.416Z",
+ "decision_ids": [
+  "D-01867",
+  "D-01868"
+ ],
+ "action_ids": [
+  "A-00724"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00959",
+   "goal_id": "G07",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00959",
+   "goal_id": "G07",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "717ed3cb-e36f-4679-86ea-e08f5a9deee1": "D-01867"
+ },
+ "last_decision": {
+  "decision_id": "D-01868",
+  "at": "2026-10-01T13:41:42.416Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00959",
+   "user_id": "U-01876",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T13:41:36.673Z",
+   "deadline": "2026-10-04T13:41:36.673Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01867",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:194424f8-e33d-44f0-b5dd-26a73e837156",
+    "catalogue:T0904"
+   ],
+   "assumptions": [],
+   "target_slug": "jakasa-dapi-d3",
+   "target_title_id": "T0904",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-012677",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "viewer_id": "U-02286",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T02:17:44.312Z",
+ "decision_ids": [
+  "D-00153",
+  "D-00154"
+ ],
+ "action_ids": [
+  "A-00058"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00125",
+   "goal_id": "G01",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00125",
+   "goal_id": "G01",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G01 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "9bbf76e7-ae6a-42d6-9029-b1a260d244d0": "D-00153"
+ },
+ "last_decision": {
+  "decision_id": "D-00154",
+  "at": "2026-10-01T02:17:44.312Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00125",
+   "user_id": "U-02286",
+   "goal_id": "G01",
+   "name": "first_play_24h",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T02:17:39.943Z",
+   "deadline": "2026-10-02T02:17:39.943Z",
+   "rule_version": "G01-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 24
+   },
+   "decision_id": "D-00153",
+   "eligibility_evidence": [
+    "goal_rule:G01:eligibility",
+    "event:b076c0c7-a1d8-4115-8088-0eb5c968727e"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-014895",
+    "rule_met": true
+   }
+  }
+ ]
+}

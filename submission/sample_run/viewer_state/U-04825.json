@@ -1,0 +1,85 @@
+{
+ "viewer_id": "U-04825",
+ "active_goal": {
+  "goal_instance_id": "G-00512",
+  "user_id": "U-04825",
+  "goal_id": "G05",
+  "name": "first_paid_7d",
+  "arm": "holdout",
+  "status": "achieved_provisional",
+  "started_at": "2026-10-01T07:38:15.001Z",
+  "deadline": "2026-10-08T07:38:15.001Z",
+  "rule_version": "G05-r1",
+  "success_signal": {
+   "event": "purchase_completed",
+   "condition": "is_trial = false",
+   "window_hours": 168
+  },
+  "decision_id": "D-00927",
+  "eligibility_evidence": [
+   "goal_rule:G05:eligibility",
+   "profile:U-04825"
+  ],
+  "assumptions": [],
+  "provisional_event": "19459b34-097d-49b2-9f1d-eece72667f0b",
+  "provisional_rule_version": "G05-r1"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T07:38:15.001Z",
+ "decision_ids": [
+  "D-00927"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "19459b34-097d-49b2-9f1d-eece72667f0b",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T07:40:32.239Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00927",
+  "at": "2026-10-01T07:38:15.001Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00512",
+   "user_id": "U-04825",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "holdout",
+   "status": "succeeded",
+   "started_at": "2026-10-01T07:38:15.001Z",
+   "deadline": "2026-10-08T07:38:15.001Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-00927",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-04825"
+   ],
+   "assumptions": [],
+   "provisional_event": "19459b34-097d-49b2-9f1d-eece72667f0b",
+   "provisional_rule_version": "G05-r1",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "n/a (holdout)",
+    "reason": "holdout goal (no action): rule met organically",
+    "success_event": "event:19459b34-097d-49b2-9f1d-eece72667f0b",
+    "rule_met": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-04689",
+ "active_goal": {
+  "goal_instance_id": "G-01474",
+  "user_id": "U-04689",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T18:13:25.894Z",
+  "deadline": "2026-10-04T18:13:25.894Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02839",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:1c48582b-1acf-4c27-8c6c-6629cba1b5bb",
+   "catalogue:T1976"
+  ],
+  "assumptions": [],
+  "target_slug": "rasuya-moni-d6",
+  "target_title_id": "T1976"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T18:13:25.894Z",
+ "decision_ids": [
+  "D-02839"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02839",
+  "at": "2026-10-01T18:13:25.894Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01474",
+   "user_id": "U-04689",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T18:13:25.894Z",
+   "deadline": "2026-10-04T18:13:25.894Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02839",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:1c48582b-1acf-4c27-8c6c-6629cba1b5bb",
+    "catalogue:T1976"
+   ],
+   "assumptions": [],
+   "target_slug": "rasuya-moni-d6",
+   "target_title_id": "T1976",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

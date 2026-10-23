@@ -1,0 +1,82 @@
+{
+ "viewer_id": "U-02231",
+ "active_goal": {
+  "goal_instance_id": "G-01197",
+  "user_id": "U-02231",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T15:08:07.545Z",
+  "deadline": "2026-10-04T15:08:07.545Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02266",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:177221f7-4b9a-4baa-b1ae-8df25dd5dc1a",
+   "catalogue:T0521"
+  ],
+  "assumptions": [],
+  "target_slug": "molo-d2",
+  "target_title_id": "T0521"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:50:50.143Z",
+ "decision_ids": [
+  "D-02266",
+  "D-02647",
+  "D-02648"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02648",
+  "at": "2026-10-01T16:50:50.143Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 3,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01197",
+   "user_id": "U-02231",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T15:08:07.545Z",
+   "deadline": "2026-10-04T15:08:07.545Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02266",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:177221f7-4b9a-4baa-b1ae-8df25dd5dc1a",
+    "catalogue:T0521"
+   ],
+   "assumptions": [],
+   "target_slug": "molo-d2",
+   "target_title_id": "T0521",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

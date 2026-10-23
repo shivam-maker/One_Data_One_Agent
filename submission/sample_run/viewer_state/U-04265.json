@@ -1,0 +1,71 @@
+{
+ "viewer_id": "U-04265",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T07:46:45.324Z",
+ "decision_ids": [
+  "D-00947"
+ ],
+ "action_ids": [
+  "A-00280"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00522",
+   "goal_id": "G09",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00522",
+   "goal_id": "G09",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G09 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "974db9be-9e30-40af-823b-8da722bf960c": "D-00947"
+ },
+ "last_decision": {
+  "decision_id": "D-00947",
+  "at": "2026-10-01T07:46:45.324Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00522",
+   "user_id": "U-04265",
+   "goal_id": "G09",
+   "name": "weekly_habit_14d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T07:46:45.324Z",
+   "deadline": "2026-10-15T07:46:45.324Z",
+   "rule_version": "G09-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "on 3 distinct IST days",
+    "window_hours": 336
+   },
+   "decision_id": "D-00947",
+   "eligibility_evidence": [
+    "goal_rule:G09:eligibility",
+    "profile:U-04265"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-027098",
+    "rule_met": true
+   }
+  }
+ ]
+}

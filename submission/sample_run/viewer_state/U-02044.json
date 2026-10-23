@@ -1,0 +1,76 @@
+{
+ "viewer_id": "U-02044",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T07:00:00.000Z",
+ "decision_ids": [
+  "D-00677",
+  "D-00836"
+ ],
+ "action_ids": [
+  "A-00169",
+  "A-00234"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00336",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00336",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "b1764f95-10c8-42dd-aaa5-17bd7d67f851": "D-00677"
+ },
+ "last_decision": {
+  "decision_id": "D-00836",
+  "at": "2026-10-01T07:00:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00336",
+   "user_id": "U-02044",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T05:37:32.554Z",
+   "deadline": "2026-10-04T05:37:32.554Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00677",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:f89694af-1e0e-463f-903f-a7181e2e9ab5",
+    "catalogue:T0034"
+   ],
+   "assumptions": [],
+   "target_slug": "labha-d1",
+   "target_title_id": "T0034",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

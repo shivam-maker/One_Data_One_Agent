@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Console</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #16181d; --muted: #5d6472; --line: #e3e6eb; --soft: #f0f2f5;
+  --accent: #4f46e5; --accent-ink: #ffffff;
+  --ok: #157f3b; --ok-bg: #e5f5ea; --warn: #9a5b00; --warn-bg: #fdf1dc; --bad: #b42318; --bad-bg: #fde8e6;
+  --info: #1d4ed8; --info-bg: #e3ecfd; --mute-bg: #eceef2;
+  --radius: 10px; --shadow: 0 1px 2px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --panel: #171a21; --ink: #e7e9ee; --muted: #9aa2b1; --line: #2a2f3a; --soft: #1e222b;
+    --accent: #8b85ff; --accent-ink: #0f1115;
+    --ok: #5ad08a; --ok-bg: #12301f; --warn: #f0b45a; --warn-bg: #33260f; --bad: #ff8a80; --bad-bg: #3a1714;
+    --info: #8fb4ff; --info-bg: #15233f; --mute-bg: #232833; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --panel: #171a21; --ink: #e7e9ee; --muted: #9aa2b1; --line: #2a2f3a; --soft: #1e222b;
+  --accent: #8b85ff; --accent-ink: #0f1115;
+  --ok: #5ad08a; --ok-bg: #12301f; --warn: #f0b45a; --warn-bg: #33260f; --bad: #ff8a80; --bad-bg: #3a1714;
+  --info: #8fb4ff; --info-bg: #15233f; --mute-bg: #232833; --shadow: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+.bar { max-width: 1280px; margin: 0 auto; padding: 12px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.brand { font-weight: 650; font-size: 16px; margin-right: auto; }
+.brand small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+main { max-width: 1280px; margin: 0 auto; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+button, .btn { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  padding: 7px 12px; border-radius: 8px; cursor: pointer; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+button:disabled { opacity: .55; cursor: wait; }
+input, select { font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--panel); color: var(--ink); min-width: 0; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.panel > h2 { margin: 0; padding: 12px 16px; font-size: 14px; border-bottom: 1px solid var(--line);
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.panel > h2 .hint { font-weight: 400; color: var(--muted); font-size: 12px; }
+.pad { padding: 12px 16px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(128px, 40vw), 1fr)); gap: 12px; }
+.kpis > * { min-width: 0; }
+.kpi { padding: 12px 14px; }
+.kpi .v { font-size: 22px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.kpi .l { color: var(--muted); font-size: 12px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; white-space: nowrap; background: var(--mute-bg); color: var(--muted); }
+.pill.ok { background: var(--ok-bg); color: var(--ok); } .pill.bad { background: var(--bad-bg); color: var(--bad); }
+.pill.warn { background: var(--warn-bg); color: var(--warn); } .pill.info { background: var(--info-bg); color: var(--info); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 960px) { .split { grid-template-columns: minmax(0, 1fr); } }
+.tablewrap { overflow-x: auto; max-height: 560px; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; position: sticky; top: 0; background: var(--panel); }
+tbody tr { cursor: pointer; } tbody tr:hover { background: var(--soft); } tbody tr.sel { background: var(--info-bg); }
+td.reason { color: var(--muted); max-width: 360px; }
+.mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12.5px; white-space: nowrap; }
+pre.mono { white-space: pre-wrap; }
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; }
+.filters button { padding: 4px 10px; font-size: 12px; }
+.filters button.on { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+.empty { padding: 28px 16px; text-align: center; color: var(--muted); }
+.panel { min-width: 0; overflow: hidden; }
+.detail { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 14px 16px; }
+.detail > * { min-width: 0; }
+.why, .kv div, .timeline .item { overflow-wrap: anywhere; }
+.detail h3 { margin: 0 0 6px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.why { font-size: 15px; }
+.kv { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 4px 12px; }
+.kv div:nth-child(odd) { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.meter { height: 8px; background: var(--soft); border-radius: 999px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--accent); }
+.row-titles { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.tile { flex: 0 0 auto; width: 128px; border: 1px solid var(--line); border-radius: 8px; padding: 8px; background: var(--soft); }
+.tile b { display: block; font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tile span { font-size: 11px; color: var(--muted); }
+.hero { border: 1px solid var(--accent); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; align-items: end; }
+.form label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); }
+.check { display: flex !important; gap: 6px; align-items: center; color: var(--ink) !important; font-size: 13px !important; }
+.toast { position: fixed; bottom: 16px; right: 16px; max-width: 420px; padding: 10px 14px; border-radius: 8px;
+  background: var(--ink); color: var(--panel); box-shadow: 0 4px 16px rgba(0,0,0,.2); display: none; z-index: 20; }
+.timeline { display: grid; gap: 8px; }
+.timeline .item { border-left: 3px solid var(--line); padding: 2px 0 2px 10px; }
+.timeline .item.PUBLISHED { border-color: var(--ok); } .timeline .item.HOLDOUT_NO_ACTION { border-color: var(--info); }
+.timeline .item.NO_ACTION { border-color: var(--warn); } .timeline .item.BLOCKED_BY_CHECKS { border-color: var(--bad); }
+a { color: var(--accent); cursor: pointer; }
+details summary { cursor: pointer; color: var(--muted); }
+@media (max-width: 640px) { .kv { grid-template-columns: 1fr; } .bar { padding: 10px 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">One User, One Agent <small>Live agent console: decisions, evidence, checks and outcomes per viewer</small></div>
+    <span id="health" class="pill"><span class="dot"></span>connecting…</span>
+    <button id="btnSeed" class="primary">Load demo data</button>
+    <button id="btnRefresh">Refresh</button>
+    <button id="btnTheme" title="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main>
+  <section class="kpis" id="kpis"></section>
+
+  <section class="panel" id="demoPanel" hidden>
+    <h2>Demo scenarios <span class="hint">each one shows a single behaviour; click a row to open the decision</span></h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Scenario</th><th>Expected</th><th>Result</th><th>Goal</th><th>Decision</th></tr></thead>
+      <tbody id="demoRows"></tbody>
+    </table></div>
+  </section>
+
+  <section class="split">
+    <div class="panel">
+      <h2>Decisions
+        <div class="filters" id="filters">
+          <button data-f="" class="on">All</button>
+          <button data-f="PUBLISHED">Published</button>
+          <button data-f="NO_ACTION">No action</button>
+          <button data-f="HOLDOUT_NO_ACTION">Holdout</button>
+          <button data-f="BLOCKED_BY_CHECKS">Blocked</button>
+        </div>
+      </h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Decision</th><th>Viewer</th><th>Status</th><th>Action</th><th>Goal</th><th>Why</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+      <div id="rowsEmpty" class="empty">No decisions yet. Press <b>Load demo data</b>, or send an app open below.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Decision detail <span class="hint" id="detailHint">select a decision</span></h2>
+      <div id="detail" class="empty">The full record appears here: goal, evidence, conflicts, checks, model use and the page that was published.</div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="panel">
+      <h2>Send an app open <span class="hint">acts exactly like a phone opening the app</span></h2>
+      <div class="pad">
+        <div class="form">
+          <label>Viewer id <input id="tViewer" value="U-00017"></label>
+          <label>App dialect
+            <select id="tDialect"><option>d1</option><option>d2</option><option>d3</option><option>d4</option>
+              <option>d5</option><option>d6</option><option>d7</option></select></label>
+          <label>Received at (UTC) <input id="tAt" value="2026-10-01T11:00:00.000Z"></label>
+          <label>Campaign link dialect
+            <select id="tLink"><option value="">none</option><option>d1</option><option>d2</option><option>d3</option>
+              <option>d4</option><option>d5</option><option>d6</option></select></label>
+          <label class="check"><input type="checkbox" id="tStale"> buffered offline for 2 days</label>
+          <button class="primary" id="btnSend">Send app open</button>
+        </div>
+        <p class="hint" style="color:var(--muted);font-size:12px;margin:10px 0 0">
+          Try a holdout viewer (U-00001), a dialect that does not exist (d7), or the same viewer twice.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Viewer <span class="hint">durable state owned by that viewer's agent</span></h2>
+      <div class="pad" style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="vId" placeholder="U-00028" style="flex:1 1 160px">
+        <button id="btnViewer">Look up</button>
+      </div>
+      <div id="viewer" class="empty">Enter a viewer id to see their active goal, plan, history and lessons.</div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let filter = "", selected = null, titleCache = {};
+
+function toast(msg, ms = 3500) { const t = $("#toast"); t.textContent = msg; t.style.display = "block";
+  clearTimeout(toast._t); toast._t = setTimeout(() => (t.style.display = "none"), ms); }
+
+async function api(path, opts = {}) {
+  const r = await fetch(path, { headers: { "Content-Type": "application/json" }, ...opts });
+  if (!r.ok) throw new Error(`${r.status} ${await r.text()}`);
+  return r.json();
+}
+
+const STATUS = { PUBLISHED: ["ok", "Published"], NO_ACTION: ["warn", "No action"], HOLDOUT_NO_ACTION: ["info", "Holdout"],
+  BLOCKED_BY_CHECKS: ["bad", "Blocked"], DUPLICATE_IGNORED: ["", "Duplicate ignored"], PLAN_REVISED: ["info", "Plan revised"] };
+const pill = (s) => { const [c, l] = STATUS[s] || ["", s || "-"]; return `<span class="pill ${c}">${esc(l)}</span>`; };
+
+// ---------- summary ----------
+async function loadSummary() {
+  try {
+    const h = await api("/health");
+    $("#health").className = "pill ok"; $("#health").innerHTML = `<span class="dot"></span>API running · ${esc(h.provider)} model`;
+  } catch (e) { $("#health").className = "pill bad"; $("#health").innerHTML = `<span class="dot"></span>API not reachable`; return; }
+  const s = await api("/v1/summary");
+  const st = s.status || {}, ac = s.actions || {};
+  const tiles = [
+    [s.decisions, "decisions"], [st.PUBLISHED || 0, "published"], [st.NO_ACTION || 0, "no action (with a reason)"],
+    [st.HOLDOUT_NO_ACTION || 0, "holdout (never acted on)"], [s.duplicates_ignored, "duplicate triggers ignored"],
+    [(ac.push || 0) + (ac.whatsapp || 0), "messages sent"], [s.model_claims_rejected, "model claims rejected"],
+    [s.latency_ms.p95 == null ? "-" : s.latency_ms.p95 + " ms", "p95 decision latency"],
+  ];
+  $("#kpis").innerHTML = tiles.map(([v, l]) => `<div class="panel kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}</div></div>`).join("");
+}
+
+// ---------- decisions ----------
+async function loadDecisions() {
+  const rows = await api(`/v1/decisions?limit=300${filter ? "&status=" + filter : ""}`);
+  $("#rowsEmpty").style.display = rows.length ? "none" : "block";
+  $("#rows").innerHTML = rows.map((d) => `<tr data-id="${esc(d.decision_id)}" class="${d.decision_id === selected ? "sel" : ""}">
+    <td class="mono">${esc(d.decision_id)}<br><span style="color:var(--muted)">${esc((d.created_at || "").slice(11, 19))}</span></td>
+    <td class="mono"><a data-viewer="${esc(d.viewer_id)}">${esc(d.viewer_id)}</a></td>
+    <td>${pill(d.status)}</td><td>${esc(d.action)}</td><td>${esc(d.goal || "-")}</td>
+    <td class="reason">${esc(d.reason || "")}</td></tr>`).join("");
+}
+
+async function titleNames(ids) {
+  const need = ids.filter((i) => i && !titleCache[i]);
+  if (need.length) Object.assign(titleCache, await api("/v1/titles?ids=" + need.join(",")));
+  return titleCache;
+}
+
+async function showDecision(id) {
+  selected = id;
+  if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+  document.querySelectorAll("#rows tr").forEach((tr) => tr.classList.toggle("sel", tr.dataset.id === id));
+  const d = await api("/v1/decisions/" + encodeURIComponent(id));
+  $("#detailHint").textContent = `${d.decision_id} · ${d.kind}`;
+  const g = d.goal;
+  const why = d.no_action_reason
+    ? `<b>Did nothing:</b> ${esc(d.no_action_reason)}`
+    : `<b>${esc(d.action)}</b> ${g ? `for goal <b>${esc(g.id)}</b> (${esc(g.name)})` : "without a goal"}${d.goal_reason ? ` · ${esc(d.goal_reason)}` : ""}`;
+  const conf = d.confidence ?? 0;
+  const checks = d.checks || { passed: [], failed: [] };
+  const extra = (d.checks_extra || []).map((c) => `<span class="pill bad">${esc(c.check)}: ${esc(c.result)}</span>`).join("");
+  const page = d.page;
+  let pageHtml = "";
+  if (page) {
+    const ids = [page.hero_title_id, ...page.rows.flatMap((r) => r.title_ids)];
+    const names = await titleNames(ids);
+    const tile = (t) => `<div class="tile"><b title="${esc(names[t]?.name)}">${esc(names[t]?.name || t)}</b><span>${esc(t)} · ${esc(names[t]?.dialect)} · ${esc(names[t]?.type)}</span></div>`;
+    pageHtml = `<div><h3>Published home page (${esc(d.dialect?.used)})</h3>
+      ${page.hero_title_id ? `<div class="hero"><span class="pill info">Hero</span> <b>${esc(names[page.hero_title_id]?.name)}</b> <span class="mono">${esc(page.hero_title_id)}</span></div>` : ""}
+      ${page.rows.map((r) => `<div style="margin-bottom:8px"><div style="font-size:12px;color:var(--muted);margin-bottom:4px">${esc(r.row_type)} · ${r.title_ids.length} titles</div><div class="row-titles">${r.title_ids.map(tile).join("")}</div></div>`).join("")}</div>`;
+  }
+  const fresh = Object.entries(d.evidence_freshness || {}).map(([k, f]) =>
+    `<tr><td>${esc(k)}</td><td class="mono">${esc(JSON.stringify(f.value))}</td><td>${esc(f.source)}</td><td>${f.age_s == null ? "-" : esc(fmtAge(f.age_s))}</td><td>${f.status === "ok" ? "" : `<span class="pill warn">${esc(f.status)}</span>`}</td></tr>`).join("");
+  const model = (d.model || []).map((m) => `<div><span class="pill ${m.ok ? (String(m.used_as).startsWith("REJECTED") ? "bad" : "ok") : "warn"}">${esc(m.task)}: ${m.ok ? "ok" : "failed"}</span> ${esc(m.used_as || m.error || "")}</div>`).join("");
+  const plan = (d.plan || []).map((p) => `<div>${esc(p.step)} · <b>${esc(p.status)}</b>${p.channel ? " · " + esc(p.channel) : ""}${p.due_at ? " · due " + esc(p.due_at) : ""}${p.reason ? " · " + esc(p.reason) : ""}</div>`).join("");
+
+  $("#detail").className = "detail";
+  $("#detail").innerHTML = `
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${pill(d.status)}
+      <span class="pill">${esc(d.arm)} arm</span><span class="pill">viewer <a data-viewer="${esc(d.viewer_id)}">&nbsp;${esc(d.viewer_id)}</a></span>
+      ${d.degraded ? `<span class="pill warn">degraded dependency</span>` : ""}</div>
+    <div class="why">${why}</div>
+    ${d.no_goal_reason ? `<div style="color:var(--muted)">No goal: ${esc(d.no_goal_reason)}</div>` : ""}
+    ${d.plan_revision ? `<div><span class="pill info">plan revised</span> ${esc(d.plan_revision)}</div>` : ""}
+    ${g ? `<div><h3>Goal</h3><div class="kv">
+      <div>Goal</div><div><b>${esc(g.id)}</b> ${esc(g.name)} <span class="pill">${esc(d.goal_status)}</span></div>
+      <div>Success signal</div><div>${esc(g.success_signal?.event)}: ${esc(g.success_signal?.condition)} (rule ${esc(g.rule_version)})</div>
+      <div>Deadline</div><div class="mono">${esc(g.deadline)}</div></div></div>` : ""}
+    <div><h3>Confidence</h3><div style="display:flex;gap:10px;align-items:center"><b>${conf.toFixed(2)}</b><div class="meter" style="flex:1"><i style="width:${Math.round(conf * 100)}%"></i></div></div>
+      <div style="color:var(--muted);font-size:13px;margin-top:4px">${esc(d.confidence_reason)}</div></div>
+    ${d.dialect ? `<div><h3>Dialect</h3><div class="kv"><div>Used</div><div><b>${esc(d.dialect.used ?? "none")}</b> from ${esc(d.dialect.source)}</div>
+      <div>Conflicts</div><div>${(d.dialect.conflicts || []).length ? d.dialect.conflicts.map((c) => `<span class="pill warn">${esc(c)}</span>`).join(" ") : "none"}</div>
+      ${d.dialect.resolution ? `<div>Resolution</div><div>${esc(d.dialect.resolution)}</div>` : ""}</div></div>` : ""}
+    <div><h3>Independent checks</h3><div class="chips">${checks.passed.map((c) => `<span class="pill ok">✓ ${esc(c)}</span>`).join("")}
+      ${checks.failed.map((c) => `<span class="pill bad" title="${esc(c.detail)}">✗ ${esc(c.check)}</span>`).join("")}${extra}
+      ${!checks.passed.length && !checks.failed.length && !extra ? `<span style="color:var(--muted)">no action, so nothing to check</span>` : ""}</div></div>
+    ${model ? `<div><h3>Model use</h3>${model}</div>` : ""}
+    ${pageHtml}
+    ${plan ? `<div><h3>Plan</h3>${plan}</div>` : ""}
+    ${fresh ? `<div><h3>Evidence and freshness</h3><div class="tablewrap" style="max-height:none"><table><thead><tr><th>Fact</th><th>Value</th><th>Source</th><th>Age</th><th></th></tr></thead><tbody>${fresh}</tbody></table></div></div>` : ""}
+    <div><h3>Timing</h3><div class="kv"><div>Decided in</div><div>${esc(d.decided_in_ms)} ms</div><div>Published at</div><div class="mono">${esc(d.published_at)}</div>
+      <div>Budget used</div><div>${esc(d.budget?.model_calls)} / ${esc(d.budget?.max_model_calls)} model calls, ${esc(d.budget?.tool_calls)} / ${esc(d.budget?.max_tool_calls)} tool calls</div></div></div>
+    <details><summary>Raw decision JSON</summary><pre class="mono" style="white-space:pre-wrap;overflow-x:auto">${esc(JSON.stringify(d, null, 2))}</pre></details>`;
+}
+
+function fmtAge(s) { if (s < 120) return s + " s"; if (s < 7200) return Math.round(s / 60) + " min"; if (s < 172800) return Math.round(s / 3600) + " h"; return Math.round(s / 86400) + " d"; }
+
+// ---------- viewer ----------
+async function showViewer(id) {
+  $("#vId").value = id;
+  let v;
+  try { v = await api("/v1/viewers/" + encodeURIComponent(id)); }
+  catch (e) { $("#viewer").className = "empty"; $("#viewer").textContent = "No state for " + id + " yet. Send an app open for this viewer first."; return; }
+  const ds = await api("/v1/decisions?viewer=" + encodeURIComponent(id));
+  const ag = v.active_goal;
+  $("#viewer").className = "detail";
+  $("#viewer").innerHTML = `
+    <div class="kv"><div>Viewer</div><div><b>${esc(id)}</b> · ${esc(v.arm)} arm · state version ${esc(v.state_version)}</div>
+      <div>Active goal</div><div>${ag ? `<b>${esc(ag.goal_id)}</b> ${esc(ag.name)} <span class="pill">${esc(ag.status)}</span> until ${esc(ag.deadline)}` : "none"}</div>
+      <div>Plan</div><div>${v.plan ? v.plan.steps.map((s) => `${esc(s.step)}: ${esc(s.status)}`).join(", ") : "none"}</div>
+      <div>Messages sent</div><div>${v.messages.length}</div></div>
+    <div><h3>Goals</h3>${(v.goals || []).map((g) => `<div>${esc(g.goal_instance_id)} · <b>${esc(g.goal_id)}</b> ${esc(g.name)} <span class="pill">${esc(g.status)}</span></div>`).join("") || "none"}</div>
+    ${(v.learned || []).length ? `<div><h3>Lessons</h3>${v.learned.map((l) => `<div>${esc(l.lesson)}</div>`).join("")}</div>` : ""}
+    <div><h3>Decision timeline</h3><div class="timeline">${ds.slice().reverse().map((d) => `<div class="item ${esc(d.status)}"><a data-decision="${esc(d.decision_id)}">${esc(d.decision_id)}</a> · ${esc((d.created_at || "").replace("T", " ").slice(0, 19))} · ${pill(d.status)} ${esc(d.action)} ${d.goal ? "· " + esc(d.goal) : ""}<div style="color:var(--muted);font-size:13px">${esc(d.reason || "")}</div></div>`).join("")}</div></div>`;
+}
+
+// ---------- actions ----------
+async function seed() {
+  if (!confirm("This clears the agent state and loads the demo (real replay slice + scenarios). Continue?")) return;
+  const b = $("#btnSeed"); b.disabled = true; b.textContent = "Loading…";
+  try {
+    await api("/v1/admin/reset", { method: "POST" });
+    const r = await api("/v1/demo/seed", { method: "POST" });
+    $("#demoPanel").hidden = false;
+    $("#demoRows").innerHTML = r.scenarios.map((s) => `<tr data-id="${esc(s.decision_id || "")}">
+      <td><b>${esc(s.scenario)}</b></td><td style="color:var(--muted)">${esc(s.expect)}</td>
+      <td>${pill(s.status)}<div style="color:var(--muted);font-size:12px;margin-top:4px">${esc((s.reason || "").slice(0, 110))}</div></td>
+      <td>${esc(s.goal || "-")}</td><td class="mono">${esc(s.decision_id || "-")}</td></tr>`).join("");
+    toast(`Loaded ${r.replay_slice.triggers} real app opens, ${r.scenarios.length} scenarios, ${r.nudges.sent} follow-up messages sent`);
+    selected = null; await refresh();
+  } catch (e) { toast("Failed: " + e.message, 6000); }
+  b.disabled = false; b.textContent = "Load demo data";
+}
+
+async function sendTrigger() {
+  const at = $("#tAt").value.trim(), u = $("#tViewer").value.trim();
+  const d = new Date(at); if (isNaN(d)) return toast("Received at must be an ISO time like 2026-10-01T11:00:00.000Z");
+  const occurred = new Date(d.getTime() - ($("#tStale").checked ? 2 * 86400000 : 0)).toISOString();
+  const link = $("#tLink").value;
+  const ev = { event_id: crypto.randomUUID(), user_id: u, event: "app_open", occurred_at: occurred, sent_at: d.toISOString(),
+    received_at: d.toISOString(), deliver_at: d.toISOString(), session_id: crypto.randomUUID(), app_dialect: $("#tDialect").value,
+    app_language: "hin", platform: "android", app_version: "6.1.4",
+    properties: link ? { deeplink: `ott://c/demo/${link}/title/T0001` } : {} };
+  try {
+    const r = await api("/v1/triggers", { method: "POST", body: JSON.stringify(ev) });
+    $("#tAt").value = new Date(d.getTime() + 5 * 60000).toISOString();  // next send is 5 minutes later
+    toast(`${u}: ${STATUS[r.status]?.[1] || r.status}${r.no_action_reason ? " · " + r.no_action_reason : ""}`, 6000);
+    await refresh();
+    if (r.decision_id) showDecision(r.decision_id);
+    showViewer(u);
+  } catch (e) { toast("Failed: " + e.message, 6000); }
+}
+
+async function refresh() {
+  await loadSummary(); await loadDecisions();
+  const fromHash = location.hash.startsWith("#D-") ? location.hash.slice(1) : null;
+  const first = document.querySelector("#rows tr[data-id]");
+  const target = selected || fromHash || (first && first.dataset.id);
+  if (target) showDecision(target).catch(() => {});
+}
+
+document.addEventListener("click", (e) => {
+  const v = e.target.closest("[data-viewer]"); if (v) { e.stopPropagation(); return showViewer(v.dataset.viewer); }
+  const dl = e.target.closest("[data-decision]"); if (dl) return showDecision(dl.dataset.decision);
+  const tr = e.target.closest("tbody tr[data-id]"); if (tr && tr.dataset.id) showDecision(tr.dataset.id);
+});
+$("#filters").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return;
+  filter = b.dataset.f; document.querySelectorAll("#filters button").forEach((x) => x.classList.toggle("on", x === b)); loadDecisions(); });
+$("#btnSeed").onclick = seed; $("#btnRefresh").onclick = refresh; $("#btnSend").onclick = sendTrigger;
+$("#btnViewer").onclick = () => $("#vId").value.trim() && showViewer($("#vId").value.trim());
+$("#vId").addEventListener("keydown", (e) => e.key === "Enter" && $("#btnViewer").click());
+$("#btnTheme").onclick = () => { const r = document.documentElement;
+  const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("oua-theme", r.dataset.theme); } catch (_) {} };
+try { const t = localStorage.getItem("oua-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+refresh();
+</script>
+</body>
+</html>

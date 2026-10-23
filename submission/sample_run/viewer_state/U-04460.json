@@ -1,0 +1,30 @@
+{
+ "viewer_id": "U-04460",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T05:41:12.735Z",
+ "decision_ids": [
+  "D-00683"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "c9925b9d-0cb0-4093-9585-6109b95b3f10",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T05:42:54.597Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00683",
+  "at": "2026-10-01T05:41:12.735Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": []
+}

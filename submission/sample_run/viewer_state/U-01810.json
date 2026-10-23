@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-01810",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T06:28:21.549Z",
+ "decision_ids": [
+  "D-00778"
+ ],
+ "action_ids": [
+  "A-00210"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00412",
+   "goal_id": "G06",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00412",
+   "goal_id": "G06",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G06 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "93445e75-efed-4128-8a19-15596ba27999": "D-00778"
+ },
+ "last_decision": {
+  "decision_id": "D-00778",
+  "at": "2026-10-01T06:28:21.549Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00412",
+   "user_id": "U-01810",
+   "goal_id": "G06",
+   "name": "reactivate_lapsed_14d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T06:28:21.549Z",
+   "deadline": "2026-10-15T06:28:21.549Z",
+   "rule_version": "G06-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "any paid plan",
+    "window_hours": 336
+   },
+   "decision_id": "D-00778",
+   "eligibility_evidence": [
+    "goal_rule:G06:eligibility",
+    "profile:U-01810",
+    "event:b292a43f-e1c4-4eff-94b4-b5f16b3e00ea"
+   ],
+   "assumptions": [
+    "'recently' defined as within 30 days (goal rule is underspecified)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G06-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

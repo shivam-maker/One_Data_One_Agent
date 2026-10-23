@@ -1,0 +1,71 @@
+{
+ "viewer_id": "U-03073",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T11:16:00.112Z",
+ "decision_ids": [
+  "D-01372"
+ ],
+ "action_ids": [
+  "A-00445"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00785",
+   "goal_id": "G05",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00785",
+   "goal_id": "G05",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G05 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "62065dea-6ad9-4492-9e81-0ad0210aa39e": "D-01372"
+ },
+ "last_decision": {
+  "decision_id": "D-01372",
+  "at": "2026-10-01T11:16:00.112Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00785",
+   "user_id": "U-03073",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T11:16:00.112Z",
+   "deadline": "2026-10-08T11:16:00.112Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-01372",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-03073"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no purchase_completed matching rule G05-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

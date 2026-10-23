@@ -1,0 +1,104 @@
+{
+ "viewer_id": "U-00976",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00806",
+  "decision_id": "D-01411",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00806",
+    "action_id": "A-01083"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01411",
+  "D-02866"
+ ],
+ "action_ids": [
+  "A-00458",
+  "A-01083"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01083",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00806",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00806",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-006616"
+  }
+ ],
+ "sessions_acted": {
+  "8f9202e8-1221-43e2-a63b-27002a3670e1": "D-01411"
+ },
+ "last_decision": {
+  "decision_id": "D-02866",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00806",
+   "user_id": "U-00976",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T11:38:18.667Z",
+   "deadline": "2026-10-04T11:38:18.667Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01411",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:e5a35f43-71cd-49db-bd2b-1e4d860152f3",
+    "catalogue:T1678"
+   ],
+   "assumptions": [],
+   "target_slug": "bhaja-moguba-d2",
+   "target_title_id": "T1678",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

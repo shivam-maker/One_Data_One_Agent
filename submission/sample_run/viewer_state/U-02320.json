@@ -1,0 +1,24 @@
+{
+ "viewer_id": "U-02320",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T12:48:46.947Z",
+ "decision_ids": [
+  "D-01571",
+  "D-01625"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01625",
+  "at": "2026-10-01T13:14:12.189Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": []
+}

@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-02402",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00888",
+  "decision_id": "D-01550",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00888",
+    "action_id": "A-01101"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01550",
+  "D-02886"
+ ],
+ "action_ids": [
+  "A-00509",
+  "A-01101"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01101",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00888",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00888",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "5f60fb57-e530-4fa0-bec9-8ac5a2a98601": "D-01550"
+ },
+ "last_decision": {
+  "decision_id": "D-02886",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00888",
+   "user_id": "U-02402",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T12:40:18.085Z",
+   "deadline": "2026-10-04T12:40:18.085Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01550",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:f445b648-2902-4c91-9ffd-a59ca9626dc3",
+    "catalogue:T1177"
+   ],
+   "assumptions": [],
+   "target_slug": "gubava-gihaya-d5",
+   "target_title_id": "T1177",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

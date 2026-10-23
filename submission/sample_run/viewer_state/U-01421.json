@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-01421",
+ "active_goal": {
+  "goal_instance_id": "G-01001",
+  "user_id": "U-01421",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T14:06:10.147Z",
+  "deadline": "2026-10-04T14:06:10.147Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-01951",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:5e30b87c-f9ec-4dcf-903d-7b01c1466627",
+   "catalogue:T1686"
+  ],
+  "assumptions": [],
+  "target_slug": "bhariya-d2",
+  "target_title_id": "T1686"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:06:10.147Z",
+ "decision_ids": [
+  "D-01951"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-01951",
+  "at": "2026-10-01T14:06:10.147Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01001",
+   "user_id": "U-01421",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T14:06:10.147Z",
+   "deadline": "2026-10-04T14:06:10.147Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01951",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:5e30b87c-f9ec-4dcf-903d-7b01c1466627",
+    "catalogue:T1686"
+   ],
+   "assumptions": [],
+   "target_slug": "bhariya-d2",
+   "target_title_id": "T1686",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

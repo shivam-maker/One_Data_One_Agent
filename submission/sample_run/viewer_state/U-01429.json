@@ -1,0 +1,103 @@
+{
+ "viewer_id": "U-01429",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00655",
+  "decision_id": "D-01162",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00655",
+    "action_id": "A-00687"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:30:00.000Z",
+ "decision_ids": [
+  "D-01162",
+  "D-01805"
+ ],
+ "action_ids": [
+  "A-00364",
+  "A-00687"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00687",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [
+  {
+   "event_id": "6a24e107-1cf3-4360-901d-2038e0f2b3d7",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T09:25:54.987Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00655",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00655",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "0253db99-169c-4de3-983f-c61816dcbd0d": "D-01162"
+ },
+ "last_decision": {
+  "decision_id": "D-01805",
+  "at": "2026-10-01T13:30:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00655",
+   "user_id": "U-01429",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T09:23:50.303Z",
+   "deadline": "2026-10-04T09:23:50.303Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01162",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:d1e0aa56-362e-40ca-bd91-c3c149c89df4",
+    "catalogue:T0926"
+   ],
+   "assumptions": [],
+   "target_slug": "koha-kagite-d4",
+   "target_title_id": "T0926",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "decisions": 2679,
+  "latency_ms": {
+    "p50": 42,
+    "p95": 801,
+    "p99": 924,
+    "max": 2001,
+    "mean": 162.4
+  },
+  "processing_ms": {
+    "p50": 42,
+    "p95": 801,
+    "max": 2001
+  },
+  "queue_ms": {
+    "p50": 0,
+    "p95": 0,
+    "max": 0
+  },
+  "within_60s": 2679,
+  "over_60s": 0,
+  "over_5min_failures": 0,
+  "home_pages": 910,
+  "home_pages_within_3s_soft_budget": 910,
+  "budget": {
+    "max_model_calls_used": 1,
+    "max_tool_calls_used": 2,
+    "limit_model_calls": 8,
+    "limit_tool_calls": 20
+  },
+  "fault_windows": [
+    {
+      "window": "model_provider_unavailable",
+      "from": "2026-10-01T10:35",
+      "to": "2026-10-01T10:42",
+      "decisions": 21,
+      "p50_ms": 42,
+      "p95_ms": 176,
+      "max_ms": 178,
+      "degraded_decisions": 0,
+      "model_failures": 6,
+      "published": 10
+    },
+    {
+      "window": "user_data_store_degraded",
+      "from": "2026-10-01T13:10",
+      "to": "2026-10-01T13:17",
+      "decisions": 16,
+      "p50_ms": 2000,
+      "p95_ms": 2001,
+      "max_ms": 2001,
+      "degraded_decisions": 14,
+      "model_failures": 0,
+      "published": 4
+    }
+  ],
+  "busiest_minute": {
+    "minute": "2026-10-01T04:45",
+    "triggers": 79,
+    "window": "busiest_minute",
+    "from": "2026-10-01T04:45",
+    "to": "2026-10-01T04:45:60",
+    "decisions": 79,
+    "p50_ms": 34,
+    "p95_ms": 57,
+    "max_ms": 490,
+    "degraded_decisions": 0,
+    "model_failures": 0,
+    "published": 1
+  },
+  "evening_peak": {
+    "window": "evening_peak_15-16Z",
+    "from": "2026-10-01T15:00",
+    "to": "2026-10-01T16:00",
+    "decisions": 340,
+    "p50_ms": 44,
+    "p95_ms": 770,
+    "max_ms": 940,
+    "degraded_decisions": 0,
+    "model_failures": 0,
+    "published": 128
+  },
+  "note": "latency = published_at - deliver_at = queue wait + measured wall time of our code + simulated dependency latency (model, data store), with timeouts of 2500 ms (model) and 2000 ms (store)."
+}

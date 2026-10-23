@@ -1,0 +1,90 @@
+{
+ "viewer_id": "U-00208",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:10:32.611Z",
+ "decision_ids": [
+  "D-01959"
+ ],
+ "action_ids": [
+  "A-00754"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "7b5f07e2-ecac-4943-b6c4-a20e95722914",
+   "event": "app_open",
+   "received_at": "2026-10-01T14:46:17.729Z",
+   "late_s": 381296
+  },
+  {
+   "event_id": "1407c915-2e25-4656-9d7c-0a6108f075f9",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T14:46:38.737Z",
+   "late_s": 381296
+  },
+  {
+   "event_id": "c876d955-983b-4471-8cd9-9bc1c6bf2959",
+   "event": "search",
+   "received_at": "2026-10-01T14:46:56.265Z",
+   "late_s": 381296
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01006",
+   "goal_id": "G02",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01006",
+   "goal_id": "G02",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G02 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "c7c97f70-4536-4058-97a0-3146d5b333ed": "D-01959"
+ },
+ "last_decision": {
+  "decision_id": "D-01959",
+  "at": "2026-10-01T14:10:32.611Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 5,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01006",
+   "user_id": "U-00208",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T14:10:32.611Z",
+   "deadline": "2026-10-04T14:10:32.611Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-01959",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "profile:U-00208"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

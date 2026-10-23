@@ -1,0 +1,105 @@
+{
+ "viewer_id": "U-04962",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01025",
+  "decision_id": "D-01986",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01025",
+    "action_id": "A-01126"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-00388",
+  "D-01986",
+  "D-02914"
+ ],
+ "action_ids": [
+  "A-00770",
+  "A-01126"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01126",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01025",
+   "goal_id": "G07",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01025",
+   "goal_id": "G07",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 reached after exposure; the same lever can be reused"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-031618"
+  }
+ ],
+ "sessions_acted": {
+  "734aed91-4f17-4b1d-a262-65fa769abbb2": "D-01986"
+ },
+ "last_decision": {
+  "decision_id": "D-02914",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01025",
+   "user_id": "U-04962",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T14:18:13.201Z",
+   "deadline": "2026-10-04T14:18:13.201Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01986",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:286696b1-66e6-4400-90c5-4b801e5d9ae5",
+    "catalogue:T0903"
+   ],
+   "assumptions": [],
+   "target_slug": "yane-tegi-d3",
+   "target_title_id": "T0903",
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-031617",
+    "rule_met": true
+   }
+  }
+ ]
+}

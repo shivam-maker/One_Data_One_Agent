@@ -1,0 +1,83 @@
+{
+ "viewer_id": "U-00003",
+ "active_goal": {
+  "goal_instance_id": "G-00108",
+  "user_id": "U-00003",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T01:47:52.341Z",
+  "deadline": "2026-10-04T01:47:52.341Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00129",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:c3297afe-adcb-43be-b8e7-a75e32bbc07f",
+   "catalogue:T0908"
+  ],
+  "assumptions": [],
+  "target_slug": "lomobha-moni-d3",
+  "target_title_id": "T0908"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T16:36:24.418Z",
+ "decision_ids": [
+  "D-00129",
+  "D-00725",
+  "D-02592",
+  "D-02593"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02593",
+  "at": "2026-10-01T16:36:24.418Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 4,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00108",
+   "user_id": "U-00003",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T01:47:52.341Z",
+   "deadline": "2026-10-04T01:47:52.341Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00129",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:c3297afe-adcb-43be-b8e7-a75e32bbc07f",
+    "catalogue:T0908"
+   ],
+   "assumptions": [],
+   "target_slug": "lomobha-moni-d3",
+   "target_title_id": "T0908",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

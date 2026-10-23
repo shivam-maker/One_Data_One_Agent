@@ -1,0 +1,94 @@
+{
+ "viewer_id": "U-04102",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00742",
+  "decision_id": "D-01305",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00742",
+    "action_id": "A-00703"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T13:30:00.000Z",
+ "decision_ids": [
+  "D-01305",
+  "D-01825"
+ ],
+ "action_ids": [
+  "A-00417",
+  "A-00703"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00703",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00742",
+   "goal_id": "G12",
+   "status": "succeeded"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00742",
+   "goal_id": "G12",
+   "verdict": "succeeded",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 reached after exposure; the same lever can be reused"
+  }
+ ],
+ "sessions_acted": {
+  "5f3d243b-7486-4cc6-8c47-27113c00d9bb": "D-01305"
+ },
+ "last_decision": {
+  "decision_id": "D-01825",
+  "at": "2026-10-01T13:30:00.000Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00742",
+   "user_id": "U-04102",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "succeeded",
+   "started_at": "2026-10-01T10:41:42.393Z",
+   "deadline": "2026-10-08T10:41:42.393Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-01305",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility"
+   ],
+   "assumptions": [
+    "no app_open anywhere in the 30-day history implies none in the last 14 days"
+   ],
+   "verdict": {
+    "verdict": "succeeded",
+    "attribution": "exposed_before_signal:home_page_shown",
+    "reason": "signal play_started after exposure to agent action (home_page_shown)",
+    "success_event": "event:oua-026240",
+    "rule_met": true
+   }
+  }
+ ]
+}

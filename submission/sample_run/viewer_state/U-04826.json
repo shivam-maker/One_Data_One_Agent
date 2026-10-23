@@ -1,0 +1,99 @@
+{
+ "viewer_id": "U-04826",
+ "active_goal": {
+  "goal_instance_id": "G-00126",
+  "user_id": "U-04826",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T02:18:56.968Z",
+  "deadline": "2026-10-04T02:18:56.968Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00155",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:bfa67563-ba37-4220-af80-9c4f86f61091",
+   "catalogue:T1976"
+  ],
+  "assumptions": [],
+  "target_slug": "rasuya-moni-d6",
+  "target_title_id": "T1976"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T02:18:56.968Z",
+ "decision_ids": [
+  "D-00155"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "e3f0a274-076d-446c-a045-c3a8d92f7bdb",
+   "event": "login_success",
+   "received_at": "2026-10-01T11:15:01.997Z",
+   "late_s": 96802
+  },
+  {
+   "event_id": "fa9a2e0f-3963-4911-a2a4-865b90263ca5",
+   "event": "app_open",
+   "received_at": "2026-10-01T11:15:06.110Z",
+   "late_s": 96802
+  },
+  {
+   "event_id": "7ae5e786-c6a3-45f7-af30-6b7ce5577706",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T11:15:10.801Z",
+   "late_s": 96802
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00155",
+  "at": "2026-10-01T02:18:56.968Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 4,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00126",
+   "user_id": "U-04826",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T02:18:56.968Z",
+   "deadline": "2026-10-04T02:18:56.968Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00155",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:bfa67563-ba37-4220-af80-9c4f86f61091",
+    "catalogue:T1976"
+   ],
+   "assumptions": [],
+   "target_slug": "rasuya-moni-d6",
+   "target_title_id": "T1976",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

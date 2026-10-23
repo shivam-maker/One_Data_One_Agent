@@ -1,0 +1,80 @@
+{
+ "viewer_id": "U-04280",
+ "active_goal": {
+  "goal_instance_id": "G-01127",
+  "user_id": "U-04280",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T15:02:03.268Z",
+  "deadline": "2026-10-04T15:02:03.268Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-02167",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:b0b28f74-1e2f-4f27-93a1-500079f4a70b",
+   "catalogue:T0677"
+  ],
+  "assumptions": [],
+  "target_slug": "nigu-tepira-d2",
+  "target_title_id": "T0677"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:02:03.268Z",
+ "decision_ids": [
+  "D-02167"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02167",
+  "at": "2026-10-01T15:02:03.268Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 1,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-01127",
+   "user_id": "U-04280",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T15:02:03.268Z",
+   "deadline": "2026-10-04T15:02:03.268Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02167",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:b0b28f74-1e2f-4f27-93a1-500079f4a70b",
+    "catalogue:T0677"
+   ],
+   "assumptions": [],
+   "target_slug": "nigu-tepira-d2",
+   "target_title_id": "T0677",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

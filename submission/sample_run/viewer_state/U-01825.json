@@ -1,0 +1,83 @@
+{
+ "viewer_id": "U-01825",
+ "active_goal": {
+  "goal_instance_id": "G-00343",
+  "user_id": "U-01825",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T05:44:18.563Z",
+  "deadline": "2026-10-04T05:44:18.563Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00687",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:04601678-28c2-4b81-98e9-124c660a9a6d",
+   "catalogue:T0017"
+  ],
+  "assumptions": [],
+  "target_slug": "dapa-pini-d1",
+  "target_title_id": "T0017"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:54:06.470Z",
+ "decision_ids": [
+  "D-00687",
+  "D-01210",
+  "D-02112",
+  "D-02113"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-02113",
+  "at": "2026-10-01T14:54:06.470Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 4,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00343",
+   "user_id": "U-01825",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T05:44:18.563Z",
+   "deadline": "2026-10-04T05:44:18.563Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00687",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:04601678-28c2-4b81-98e9-124c660a9a6d",
+    "catalogue:T0017"
+   ],
+   "assumptions": [],
+   "target_slug": "dapa-pini-d1",
+   "target_title_id": "T0017",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

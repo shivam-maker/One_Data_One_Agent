@@ -1,0 +1,135 @@
+{
+ "viewer_id": "U-02656",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T08:42:17.454Z",
+ "decision_ids": [
+  "D-01004",
+  "D-01072"
+ ],
+ "action_ids": [
+  "A-00300",
+  "A-00331"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "13c98f16-8cb5-44fa-aa71-656d9cb739f6",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T08:13:40.026Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00554",
+   "goal_id": "G05",
+   "closed_at": "2026-10-01T08:42:17.454Z",
+   "status": "achieved_provisional",
+   "note": "success signal observed; awaiting final judgment"
+  },
+  {
+   "goal_instance_id": "G-00597",
+   "goal_id": "G09",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00554",
+   "goal_id": "G05",
+   "verdict": "inconclusive",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G05 inconclusive (in_flight)"
+  },
+  {
+   "goal_instance_id": "G-00597",
+   "goal_id": "G09",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G09 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "4991aa40-5240-4229-bedf-767fe803408d": "D-01004",
+  "11e3118c-dd19-4f7a-8ab1-ac8f5196a053": "D-01072"
+ },
+ "last_decision": {
+  "decision_id": "D-01072",
+  "at": "2026-10-01T08:42:17.454Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00554",
+   "user_id": "U-02656",
+   "goal_id": "G05",
+   "name": "first_paid_7d",
+   "arm": "agent",
+   "status": "inconclusive",
+   "started_at": "2026-10-01T08:11:34.583Z",
+   "deadline": "2026-10-08T08:11:34.583Z",
+   "rule_version": "G05-r1",
+   "success_signal": {
+    "event": "purchase_completed",
+    "condition": "is_trial = false",
+    "window_hours": 168
+   },
+   "decision_id": "D-01004",
+   "eligibility_evidence": [
+    "goal_rule:G05:eligibility",
+    "profile:U-02656"
+   ],
+   "assumptions": [],
+   "provisional_event": "13c98f16-8cb5-44fa-aa71-656d9cb739f6",
+   "provisional_rule_version": "G05-r1",
+   "history": [
+    {
+     "at": "2026-10-01T08:42:17.454Z",
+     "event": "achieved_provisional",
+     "note": "success signal observed; awaiting final judgment"
+    }
+   ],
+   "verdict": {
+    "verdict": "inconclusive",
+    "attribution": "in_flight",
+    "reason": "purchase 125s after the decision: the purchase flow was already under way, so it cannot be credited to the agent",
+    "success_event": "event:13c98f16-8cb5-44fa-aa71-656d9cb739f6",
+    "rule_met": true
+   }
+  },
+  {
+   "goal_instance_id": "G-00597",
+   "user_id": "U-02656",
+   "goal_id": "G09",
+   "name": "weekly_habit_14d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T08:42:17.454Z",
+   "deadline": "2026-10-15T08:42:17.454Z",
+   "rule_version": "G09-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "on 3 distinct IST days",
+    "window_hours": 336
+   },
+   "decision_id": "D-01072",
+   "eligibility_evidence": [
+    "goal_rule:G09:eligibility",
+    "event:13c98f16-8cb5-44fa-aa71-656d9cb739f6"
+   ],
+   "assumptions": [
+    "status conflict resolved: lifecycle event received after the profile row supersedes it"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G09-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

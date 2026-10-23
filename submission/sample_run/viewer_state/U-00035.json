@@ -1,0 +1,98 @@
+{
+ "viewer_id": "U-00035",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01003",
+  "decision_id": "D-01953",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01003",
+    "action_id": "A-01119"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01953",
+  "D-02108",
+  "D-02134",
+  "D-02907"
+ ],
+ "action_ids": [
+  "A-00751",
+  "A-01119"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01119",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01003",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01003",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 4 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "cbc55d8c-efa6-4358-b356-47a022dc3976": "D-01953"
+ },
+ "last_decision": {
+  "decision_id": "D-02907",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 5,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01003",
+   "user_id": "U-00035",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T14:07:05.781Z",
+   "deadline": "2026-10-04T14:07:05.781Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01953",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:811da2ed-92a7-44c1-bd61-b62fb48f4336",
+    "catalogue:T1503"
+   ],
+   "assumptions": [],
+   "target_slug": "hate-d1",
+   "target_title_id": "T1503",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

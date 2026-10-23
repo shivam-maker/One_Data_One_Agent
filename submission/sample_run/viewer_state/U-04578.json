@@ -1,0 +1,96 @@
+{
+ "viewer_id": "U-04578",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00591",
+  "decision_id": "D-01063",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-01T13:30:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00591",
+    "action_id": "A-00673"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T14:25:44.977Z",
+ "decision_ids": [
+  "D-01063",
+  "D-01790",
+  "D-02020"
+ ],
+ "action_ids": [
+  "A-00326",
+  "A-00673",
+  "A-00780"
+ ],
+ "messages": [
+  {
+   "action_id": "A-00673",
+   "ist_day": "2026-10-01",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00591",
+   "goal_id": "G12",
+   "status": "inconclusive"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00591",
+   "goal_id": "G12",
+   "verdict": "inconclusive",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 inconclusive (no_prior_exposure)"
+  }
+ ],
+ "sessions_acted": {
+  "983d57f6-2311-4380-ab6d-f1ba552c39d3": "D-01063",
+  "e5627f67-0e27-40f0-a960-f9db24dbb999": "D-02020"
+ },
+ "last_decision": {
+  "decision_id": "D-02020",
+  "at": "2026-10-01T14:25:44.977Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 4,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00591",
+   "user_id": "U-04578",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "inconclusive",
+   "started_at": "2026-10-01T08:39:08.662Z",
+   "deadline": "2026-10-08T08:39:08.662Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-01063",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility",
+    "event:01a9bdd6-37a6-4b34-823a-99855ed57172"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "inconclusive",
+    "attribution": "no_prior_exposure",
+    "reason": "signal happened, but the viewer had not seen any agent page or message before it",
+    "success_event": "event:oua-028884",
+    "rule_met": true
+   }
+  }
+ ]
+}

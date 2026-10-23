@@ -1,0 +1,100 @@
+{
+ "viewer_id": "U-03592",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00925",
+  "decision_id": "D-01633",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00925",
+    "action_id": "A-01108"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01633",
+  "D-02429",
+  "D-02774",
+  "D-02893"
+ ],
+ "action_ids": [
+  "A-00540",
+  "A-00945",
+  "A-01108"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01108",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00925",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00925",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 3 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "f2eb8755-56df-4d0c-b0ce-1b219f883094": "D-01633",
+  "906b25ac-9793-4466-be9a-3331778a6eb5": "D-02429"
+ },
+ "last_decision": {
+  "decision_id": "D-02893",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 5,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00925",
+   "user_id": "U-03592",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T13:17:53.719Z",
+   "deadline": "2026-10-04T13:17:53.719Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01633",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:ea3579c8-23bc-4b10-968f-cbf02dd5734c",
+    "catalogue:T0002"
+   ],
+   "assumptions": [],
+   "target_slug": "hama-chudibha-d1",
+   "target_title_id": "T0002",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

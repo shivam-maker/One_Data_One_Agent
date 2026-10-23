@@ -1,0 +1,85 @@
+{
+ "viewer_id": "U-03469",
+ "active_goal": {
+  "goal_instance_id": "G-00476",
+  "user_id": "U-03469",
+  "goal_id": "G02",
+  "name": "first_full_episode_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T07:15:38.839Z",
+  "deadline": "2026-10-04T07:15:38.839Z",
+  "rule_version": "G02-r1",
+  "success_signal": {
+   "event": "episode_completed",
+   "condition": "any episode",
+   "window_hours": 72
+  },
+  "decision_id": "D-00875",
+  "eligibility_evidence": [
+   "goal_rule:G02:eligibility",
+   "event:6dcae714-7254-4f3d-9792-fe02a92d59f1"
+  ],
+  "assumptions": [
+   "no episode was completed before the history window (2026-09-01)"
+  ]
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T07:15:38.839Z",
+ "decision_ids": [
+  "D-00875"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "1d35315b-0ca6-4ad0-bb63-dafb173785a8",
+   "event": "purchase_completed",
+   "received_at": "2026-10-01T07:17:40.021Z",
+   "late_s": 0
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00875",
+  "at": "2026-10-01T07:15:38.839Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 2,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00476",
+   "user_id": "U-03469",
+   "goal_id": "G02",
+   "name": "first_full_episode_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T07:15:38.839Z",
+   "deadline": "2026-10-04T07:15:38.839Z",
+   "rule_version": "G02-r1",
+   "success_signal": {
+    "event": "episode_completed",
+    "condition": "any episode",
+    "window_hours": 72
+   },
+   "decision_id": "D-00875",
+   "eligibility_evidence": [
+    "goal_rule:G02:eligibility",
+    "event:6dcae714-7254-4f3d-9792-fe02a92d59f1"
+   ],
+   "assumptions": [
+    "no episode was completed before the history window (2026-09-01)"
+   ],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no episode_completed matching rule G02-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

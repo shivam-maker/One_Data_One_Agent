@@ -1,0 +1,104 @@
+{
+ "viewer_id": "U-02242",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-00875",
+  "decision_id": "D-01523",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-00875",
+    "action_id": "A-01095"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-01523",
+  "D-02879"
+ ],
+ "action_ids": [
+  "A-00499",
+  "A-01095"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01095",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00875",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00875",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  },
+  {
+   "lesson": "push failed: token_invalid",
+   "effect": "disable this channel for the viewer",
+   "source": "oua-014599"
+  }
+ ],
+ "sessions_acted": {
+  "02aba39a-7a7f-422d-b8fd-1cdb7d4aa12c": "D-01523"
+ },
+ "last_decision": {
+  "decision_id": "D-02879",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "channel_state": {
+  "push": "disabled: token_invalid"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00875",
+   "user_id": "U-02242",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T12:22:58.562Z",
+   "deadline": "2026-10-04T12:22:58.562Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-01523",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:2e0ccc8f-f015-42c2-87a8-fb20c79620d4",
+    "catalogue:T0522"
+   ],
+   "assumptions": [],
+   "target_slug": "guka-kosusa-d2",
+   "target_title_id": "T0522",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

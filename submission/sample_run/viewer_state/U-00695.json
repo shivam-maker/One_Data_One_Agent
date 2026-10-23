@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-00695",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T14:40:26.623Z",
+ "decision_ids": [
+  "D-02073"
+ ],
+ "action_ids": [
+  "A-00805"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01072",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01072",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "6d924c77-723a-44b5-b063-04e6882bc635": "D-02073"
+ },
+ "last_decision": {
+  "decision_id": "D-02073",
+  "at": "2026-10-01T14:40:26.623Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01072",
+   "user_id": "U-00695",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T14:40:26.623Z",
+   "deadline": "2026-10-04T14:40:26.623Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02073",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:6456d375-ee8e-49d0-a148-2e8db766fa3a",
+    "catalogue:T0002"
+   ],
+   "assumptions": [],
+   "target_slug": "hama-chudibha-d1",
+   "target_title_id": "T0002",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

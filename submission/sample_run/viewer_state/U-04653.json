@@ -1,0 +1,121 @@
+{
+ "viewer_id": "U-04653",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T04:46:10.296Z",
+ "decision_ids": [
+  "D-00342",
+  "D-00447"
+ ],
+ "action_ids": [
+  "A-00129"
+ ],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "f9b9c79c-49c6-4f01-931e-14d0ba2b96be",
+   "event": "app_open",
+   "received_at": "2026-10-01T08:06:31.172Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "8b6984b7-50af-481f-9e8e-ed31899bdfe4",
+   "event": "home_viewed",
+   "received_at": "2026-10-01T08:06:46.040Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "53a612b1-f330-4994-bc17-5d3e4c08e70f",
+   "event": "title_viewed",
+   "received_at": "2026-10-01T08:07:06.312Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "68c71d49-489d-4cdb-ae08-80784a289116",
+   "event": "play_started",
+   "received_at": "2026-10-01T08:08:26.594Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "38e2c2c7-5430-4600-804d-fa32a2f277fa",
+   "event": "play_progress",
+   "received_at": "2026-10-01T08:32:56.631Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "dcbe52ee-0ab4-4343-be62-a0879d16d0a7",
+   "event": "play_progress",
+   "received_at": "2026-10-01T08:57:27.570Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "269c1aeb-40c6-4ba6-889c-dad9fb6269fc",
+   "event": "play_progress",
+   "received_at": "2026-10-01T09:21:57.796Z",
+   "late_s": 141669
+  },
+  {
+   "event_id": "313d97d0-f132-43f3-8d2a-b2744ca4d4e0",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T09:38:38.102Z",
+   "late_s": 141669
+  }
+ ],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-00260",
+   "goal_id": "G09",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-00260",
+   "goal_id": "G09",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G09 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "043781e7-27b7-4bbd-90a0-c4be8045068e": "D-00342"
+ },
+ "last_decision": {
+  "decision_id": "D-00447",
+  "at": "2026-10-01T04:46:10.296Z",
+  "status": "NO_ACTION"
+ },
+ "state_version": 11,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-00260",
+   "user_id": "U-04653",
+   "goal_id": "G09",
+   "name": "weekly_habit_14d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T04:40:32.755Z",
+   "deadline": "2026-10-15T04:40:32.755Z",
+   "rule_version": "G09-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "on 3 distinct IST days",
+    "window_hours": 336
+   },
+   "decision_id": "D-00342",
+   "eligibility_evidence": [
+    "goal_rule:G09:eligibility",
+    "profile:U-04653"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G09-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

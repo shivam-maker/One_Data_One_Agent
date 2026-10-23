@@ -1,0 +1,74 @@
+{
+ "viewer_id": "U-03375",
+ "active_goal": null,
+ "plan": null,
+ "facts_cache_at": "2026-10-01T15:21:06.862Z",
+ "decision_ids": [
+  "D-02340"
+ ],
+ "action_ids": [
+  "A-00909"
+ ],
+ "messages": [],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01242",
+   "goal_id": "G07",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01242",
+   "goal_id": "G07",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G07 failed despite 1 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "a83f7116-4727-4b6a-8691-fcd85a236752": "D-02340"
+ },
+ "last_decision": {
+  "decision_id": "D-02340",
+  "at": "2026-10-01T15:21:06.862Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 2,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01242",
+   "user_id": "U-03375",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T15:21:06.862Z",
+   "deadline": "2026-10-04T15:21:06.862Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-02340",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:e2082359-0efd-4e2e-8c69-ff1371237e82",
+    "catalogue:T1179"
+   ],
+   "assumptions": [],
+   "target_slug": "jamo-hasa-d5",
+   "target_title_id": "T1179",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

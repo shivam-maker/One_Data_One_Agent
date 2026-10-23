@@ -1,0 +1,117 @@
+{
+ "viewer_id": "U-00710",
+ "active_goal": {
+  "goal_instance_id": "G-00150",
+  "user_id": "U-00710",
+  "goal_id": "G07",
+  "name": "resume_series_3d",
+  "arm": "holdout",
+  "status": "open",
+  "started_at": "2026-10-01T02:46:58.924Z",
+  "deadline": "2026-10-04T02:46:58.924Z",
+  "rule_version": "G07-r1",
+  "success_signal": {
+   "event": "play_started",
+   "condition": "same content_slug as the unfinished series",
+   "window_hours": 72
+  },
+  "decision_id": "D-00182",
+  "eligibility_evidence": [
+   "goal_rule:G07:eligibility",
+   "event:c7a53575-f5cf-47c5-9587-fd4f1b667aca",
+   "catalogue:T1177"
+  ],
+  "assumptions": [],
+  "target_slug": "gubava-gihaya-d5",
+  "target_title_id": "T1177"
+ },
+ "plan": null,
+ "facts_cache_at": "2026-10-01T02:46:58.924Z",
+ "decision_ids": [
+  "D-00182"
+ ],
+ "action_ids": [],
+ "messages": [],
+ "observed": [
+  {
+   "event_id": "d1ba8a5e-138c-45ec-8fd6-22f6b374a61a",
+   "event": "app_open",
+   "received_at": "2026-10-01T12:43:11.813Z",
+   "late_s": 101251
+  },
+  {
+   "event_id": "093340f9-63b0-4cac-aaf6-a8cbbfbd692b",
+   "event": "play_started",
+   "received_at": "2026-10-01T12:45:02.652Z",
+   "late_s": 101251
+  },
+  {
+   "event_id": "585c2ab9-87c2-4734-add5-9b6076689b75",
+   "event": "play_progress",
+   "received_at": "2026-10-01T12:45:33.375Z",
+   "late_s": 101251
+  },
+  {
+   "event_id": "777fcc50-3775-4bc8-ac74-01542855369a",
+   "event": "play_progress",
+   "received_at": "2026-10-01T12:46:02.587Z",
+   "late_s": 101251
+  },
+  {
+   "event_id": "7d61b488-31a3-4f47-a5bb-2ff01360c6fd",
+   "event": "play_progress",
+   "received_at": "2026-10-01T12:46:34.592Z",
+   "late_s": 101251
+  },
+  {
+   "event_id": "4461b188-9c33-4a5e-9f63-d86ea0f75ebc",
+   "event": "episode_completed",
+   "received_at": "2026-10-01T12:46:53.323Z",
+   "late_s": 101251
+  }
+ ],
+ "goal_history": [],
+ "learned": [],
+ "sessions_acted": {},
+ "last_decision": {
+  "decision_id": "D-00182",
+  "at": "2026-10-01T02:46:58.924Z",
+  "status": "HOLDOUT_NO_ACTION"
+ },
+ "state_version": 7,
+ "arm": "holdout",
+ "goals": [
+  {
+   "goal_instance_id": "G-00150",
+   "user_id": "U-00710",
+   "goal_id": "G07",
+   "name": "resume_series_3d",
+   "arm": "holdout",
+   "status": "failed",
+   "started_at": "2026-10-01T02:46:58.924Z",
+   "deadline": "2026-10-04T02:46:58.924Z",
+   "rule_version": "G07-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "same content_slug as the unfinished series",
+    "window_hours": 72
+   },
+   "decision_id": "D-00182",
+   "eligibility_evidence": [
+    "goal_rule:G07:eligibility",
+    "event:c7a53575-f5cf-47c5-9587-fd4f1b667aca",
+    "catalogue:T1177"
+   ],
+   "assumptions": [],
+   "target_slug": "gubava-gihaya-d5",
+   "target_title_id": "T1177",
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G07-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}

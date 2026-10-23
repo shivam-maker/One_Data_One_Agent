@@ -1,0 +1,93 @@
+{
+ "viewer_id": "U-04277",
+ "active_goal": null,
+ "plan": {
+  "goal_instance_id": "G-01227",
+  "decision_id": "D-02316",
+  "steps": [
+   {
+    "step": "conditional_nudge",
+    "status": "done",
+    "channel": "push",
+    "due_at": "2026-10-02T07:00:00.000Z",
+    "condition": "send only if the goal's success signal has not been observed by due_at and all checks pass at send time",
+    "goal_instance_id": "G-01227",
+    "action_id": "A-01151"
+   }
+  ]
+ },
+ "facts_cache_at": "2026-10-01T18:31:25.944Z",
+ "decision_ids": [
+  "D-02316",
+  "D-02943"
+ ],
+ "action_ids": [
+  "A-00900",
+  "A-01151"
+ ],
+ "messages": [
+  {
+   "action_id": "A-01151",
+   "ist_day": "2026-10-02",
+   "channel": "push"
+  }
+ ],
+ "observed": [],
+ "goal_history": [
+  {
+   "goal_instance_id": "G-01227",
+   "goal_id": "G12",
+   "status": "failed"
+  }
+ ],
+ "learned": [
+  {
+   "goal_instance_id": "G-01227",
+   "goal_id": "G12",
+   "verdict": "failed",
+   "judged_at": "2026-10-16T00:00:00.000Z",
+   "lesson": "G12 failed despite 2 exposure(s); avoid this goal for 7 days, try another lever"
+  }
+ ],
+ "sessions_acted": {
+  "4bb11113-7153-40be-9f7e-550f634af54a": "D-02316"
+ },
+ "last_decision": {
+  "decision_id": "D-02943",
+  "at": "2026-10-01T18:31:25.944Z",
+  "status": "PUBLISHED"
+ },
+ "state_version": 3,
+ "arm": "agent",
+ "goals": [
+  {
+   "goal_instance_id": "G-01227",
+   "user_id": "U-04277",
+   "goal_id": "G12",
+   "name": "return_after_absence_7d",
+   "arm": "agent",
+   "status": "failed",
+   "started_at": "2026-10-01T15:14:32.623Z",
+   "deadline": "2026-10-08T15:14:32.623Z",
+   "rule_version": "G12-r1",
+   "success_signal": {
+    "event": "play_started",
+    "condition": "any title",
+    "window_hours": 168
+   },
+   "decision_id": "D-02316",
+   "eligibility_evidence": [
+    "goal_rule:G12:eligibility",
+    "event:024b98e8-6550-429d-81c2-283b223b9148"
+   ],
+   "assumptions": [],
+   "verdict": {
+    "verdict": "failed",
+    "attribution": null,
+    "reason": "no play_started matching rule G12-r1 before the deadline",
+    "success_event": null,
+    "rule_met": false
+   }
+  }
+ ]
+}
